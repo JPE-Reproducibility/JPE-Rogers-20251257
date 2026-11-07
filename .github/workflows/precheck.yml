@@ -12,6 +12,7 @@ jobs:
 
     env:
       DROPBOX_DOWNLOAD_URL: ${{ secrets.DROPBOX_DOWNLOAD_URL }}
+      PAPER_DOWNLOAD_URL: ${{ secrets.PAPER_DOWNLOAD_URL }}
     
     steps:
       - name: Checkout repository
@@ -39,6 +40,10 @@ jobs:
             println("✓ YAML loaded")
             using PackageScanner
             println("✓ PackageScanner loaded")
+            using JSON
+            println("✓ JSON loaded")
+            using Dates
+            println("✓ Dates loaded")
             println("\n✓ All required packages available")
           '
       
@@ -60,7 +65,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add .
-          [ -s generated/force-add-files.txt ] && xargs git add -f < generated/force-add-files.txt
+          [ -s generated/force-add-files.txt ] && while IFS= read -r f; do git add -f -- "$f"; done < generated/force-add-files.txt
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

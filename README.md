@@ -1,4 +1,6 @@
-# JPE Report Template 
+# JPE/Rogers-20251257/1
+
+[![Run Precheck](https://github.com/JPE-Reproducibility/JPE-Rogers-20251257/actions/workflows/precheck.yml/badge.svg)](https://github.com/JPE-Reproducibility/JPE-Rogers-20251257/actions/workflows/precheck.yml)
 
 > This template is heavily based on the AEA Data Editor's template https://github.com/AEADataEditor/replication-template 
 > Thanks! 🙏
@@ -76,5 +78,3 @@ Few remarks:
 1. Get VScode
 2. install [markdown paste](https://marketplace.visualstudio.com/items/?itemName=telesoho.vscode-markdown-paste-image) extension
 3. Go to [https://jpe-reproducibility.github.io/jpereplicators/](https://jpe-reproducibility.github.io/jpereplicators/) for step by step guidance.
-
-

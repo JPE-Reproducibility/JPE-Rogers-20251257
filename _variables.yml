@@ -1,6 +1,13 @@
-title: "Stand-in title"
-author: "Dr Prof James 'JayJay' Author"
-paper_id: 12345678
+title: "Regulating the Innovators: Approval Costs and Innovation in Medical Technologies"
+author: "Rogers"
 round: 1
-repo: "https://www.github.com/standin"
-dropbox_rel_path: "JPE/Author-12345678/1"
+repo: "https://github.com/JPE-Reproducibility/JPE-Rogers-20251257"
+paper_id: 20251257
+journal: "JPE"
+paper_slug: "Rogers-20251257"
+dropbox_rel_path: "JPE/Rogers-20251257/1"
+package_size_gb: 11.48
+package_max_file_size_gb: 2
+package_max_pkg_size_gb: 10
+large_reports_url: "https://www.dropbox.com/scl/fo/vfjw64sh1k41pfs7aq8v5/AFE957QJUNO9QA8gtWIQwEQ?rlkey=iydskso3qlchkh2qfmpb2kfnk&dl=0"
+paper_source_subfolder: "paper-appendices"
