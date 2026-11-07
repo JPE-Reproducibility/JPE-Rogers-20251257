@@ -172,3 +172,7 @@ TEMPLATE_files/
 *.fst
 *.FST
 paper-source/**
+*.parquet
+*.PARQUET
+*.safetensors
+*.SAFETENSORS
