@@ -1,0 +1,574 @@
+{
+  "data_sources": [
+    {
+      "name": "FDA reclassification events (Federal Register records, 1980-2015; Class III to II and Class II to I; plus 2015 and late-2019 events)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "FDA PMA and 510(k) databases (device submissions, firm names, brand names, dates)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "FDA MAUDE adverse event reports (1992-2019, about 9.2 million reports)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "Dimensions patent grants extract (USPTO patents, 1976-2019, over 1.2 million medical device patents)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "Kogan et al. (2017) patent market values (patent value in 2019 dollars, linked to firm assets)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "CRSP/Compustat (firm asset totals for public firms)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "Truven Health MarketScan commercial claims (1996-2013, outpatient paid amounts by HCPCS/CPT)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "FDA device recall data (2000-2022/23)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "Nexis Uni (medical device tort, preemption and bankruptcy case counts)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "Kelly and Seru (2021) patent novelty/breakthrough index",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "Makower et al. (2010) survey of FDA-related costs and delays (204 firms)",
+      "access_date": null,
+      "url_or_doi": null
+    },
+    {
+      "name": "GPT-5-mini device-to-procedure concordance and GPT-4o device/not-device patent screening and device introduction year coding (constructed data)",
+      "access_date": null,
+      "url_or_doi": null
+    }
+  ],
+  "data_processing_steps": [
+    {
+      "description": "Compile all FDA reclassification events from 1980-2015. Main Class III to II sample is the 12 FDA-initiated events (of 29; 17 were petition-driven and are excluded from the main sample). Device types need at least one PMA submission or patent before reclassification. Class II to I events (1996/1998 events) need at least one pre-event patent. Later-treated controls are Class III to II events after 2015 (outcomes censored after 2015) and Class II to I devices moved in late 2019.",
+      "variables_involved": [
+        "reclass indicator",
+        "FDA-initiated vs petitioned",
+        "event year",
+        "device type (product code)"
+      ]
+    },
+    {
+      "description": "Build device-type-year counts from the FDA PMA/510(k) data using fuzzy firm-name matching: new entry (firm's first-ever submission), incumbent entry (firm with prior submissions starting in a new device type), and unique device submissions (first occurrence of a brand name within a type). Regulatory proficiency is the firm's cumulative approval delay in days up to each submission.",
+      "variables_involved": [
+        "new entry (device data)",
+        "incumbent entry (device data)",
+        "unique device submissions",
+        "cumulative approval days / cumulative product count"
+      ]
+    },
+    {
+      "description": "Construct device-type-year serious adverse event counts from MAUDE (deaths, hospitalizations, life-threatening events, disabilities). Also build severity share (serious events divided by total reports) and events per linked procedure (for 15 deregulated device types, using MarketScan volumes). Link the 300 largest reporting manufacturers to CRSP/Compustat assets (88 are private with no match).",
+      "variables_involved": [
+        "serious adverse events",
+        "hospitalizations",
+        "life-threatening events",
+        "deaths",
+        "severity share",
+        "serious events per procedure"
+      ]
+    },
+    {
+      "description": "Link patents to over 5,000 FDA device types by keyword search (all keywords from regulation-number and device-name descriptions must appear in the patent text) in Dimensions. A patent matched to several types is randomly assigned to one. Aggregate by initial filing date to device-type-year patent counts. Robustness samples: CPC A61* excluding A61P, and a GPT-4o device/not-device screen.",
+      "variables_involved": [
+        "patent count (patenting rate)",
+        "new firms patenting",
+        "incumbent firms patenting"
+      ]
+    },
+    {
+      "description": "Patent quality: forward citations (excluding examiner citations) and Kogan et al. market value (2019 dollars, public firms only). Zeros are assigned when no patents are filed in a device-type-year. Safety emphasis is a binary device-type-year indicator equal to one if any patent title or abstract contains a safety term from a Word2Vec-selected keyword list. Breakthrough patents use the Kelly-Seru novelty index.",
+      "variables_involved": [
+        "forward citations per patent",
+        "patent market value",
+        "safety emphasis indicator",
+        "breakthrough patent count"
+      ]
+    },
+    {
+      "description": "Price data: GPT-5-mini links FDA product codes to outpatient CPT/HCPCS procedures (15 Class II to I types; 3 of 12 Class III to II types). Compare with an expert-coder concordance. Aggregate MarketScan paid amounts to annual mean paid amounts by linked device type. Controls are CPTs matched on pre-event mean price from the full CPT universe, or procedures tied to device-type controls. Sample is about 17,400 procedure codes and 182,200 procedure-year observations.",
+      "variables_involved": [
+        "log procedure price",
+        "log procedure count (utilization)",
+        "CPT/HCPCS linkage"
+      ]
+    },
+    {
+      "description": "Build three control groups: later-treated, intuitive (similar ailment and risk), and matched. Matched controls are the two nearest never-reclassified product codes using 5-year pre-event means. Adverse events use Mahalanobis distance; innovation and market structure use squared Euclidean distance on patent counts and new firms patenting (plus device submissions for III to II); patent quality uses forward citations and real patent value. Matched units must have at least one pre-period patent, and device types treating the same indications as the treated code are excluded.",
+      "variables_involved": [
+        "matched control sets",
+        "5-year pre-event means",
+        "intuitive controls",
+        "later-treated controls"
+      ]
+    },
+    {
+      "description": "Stacked difference-in-differences (Cengiz et al. 2019). Panels are event-specific, with event-by-device-type and event-by-year fixed effects. The reclass indicator turns on at announcement for forward-looking outcomes (patents) and at enactment for FDA-derived outcomes. Inference uses Conley-Taber for small numbers of treated events. Estimated separately for Class III to II and Class II to I. Robustness: Borusyak et al. imputation, log(y+1), quasi-Poisson, and dropping zero-count device types.",
+      "variables_involved": [
+        "reclass indicator",
+        "event-by-device-type FE",
+        "event-by-year FE",
+        "event-time dummies"
+      ]
+    },
+    {
+      "description": "Heterogeneity analysis: DiD by tercile of firm regulatory proficiency (device submissions) and by tercile of firm assets (patenting rate, probability of any safety innovation, probability of any serious event, using an LPM at the firm-within-device-type level).",
+      "variables_involved": [
+        "proficiency terciles",
+        "asset terciles",
+        "device submissions",
+        "patenting",
+        "safety mention probability",
+        "serious event probability"
+      ]
+    },
+    {
+      "description": "Market age and device-level analysis: market age is the reclassification year minus the earliest of first clinical study, earliest patent, or first FDA submission, using hand coding plus GPT-4o (r=0.76 against hand-coded values for 25 down-regulated types). Device-level DiD effects on severity share and patents are regressed on market age with controls for baseline severity, baseline patenting, device-category FE, and an FDA-initiated indicator (III to II) or the Device Priority Model score (II to I). A back-of-the-envelope cost-benefit calculation follows.",
+      "variables_involved": [
+        "market age",
+        "device-level DiD effect",
+        "baseline severity",
+        "baseline patenting",
+        "device category FE",
+        "FDA-initiated indicator",
+        "Proxy DPM score"
+      ]
+    },
+    {
+      "description": "Proxy Device Priority Model score: 0.38*Deaths + 0.30*Serious Injuries + 0.12*Less-Serious Injuries (average annual adverse-event counts). LDA topic modeling of patent titles and abstracts, with the topic count chosen by coherence, gives topic-device-year panels for product variety.",
+      "variables_involved": [
+        "Proxy DPM",
+        "patent topics"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "label": "Table 1 (tab:SummaryStatistics)",
+      "title": "Summary statistics (referenced in Section 3)",
+      "estimator": null,
+      "outcome_var": null,
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": null,
+      "data_source": "Table body is not in the flattened text (input file Table_1_summary_stats.tex unresolved). Cited only in the Data section."
+    },
+    {
+      "label": "Table 2 (tab:Innovation)",
+      "title": "Effect of Reclassification on Innovation",
+      "estimator": "Stacked DiD OLS (Equation 1), estimated separately for Panel A (Class III to II) and Panel B (Class II to I). Col 1 is the treated 5-year pre-event mean. Cols 2-4 use matched, intuitive and later-treated controls.",
+      "outcome_var": "Patenting rate (patents per device-type-year), unique device submissions (Panel A only; unavailable for Class I), forward citations per patent, and patent market value (Kogan et al., millions of 2019 dollars). The row labels are in an unresolved input file, so this list comes from the text.",
+      "key_regressors": [
+        "1{reclass} (post-reclassification indicator)"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber inference (confidence intervals); the stacked design allows reuse of controls across panels",
+      "sample_restriction": "Class III to II: 12 FDA-initiated events with at least one prior PMA submission or patent. Class II to I: types with at least one pre-event patent. Later-treated column drops post-2015 observations for III to II. Matched controls need at least one pre-period patent.",
+      "data_source": "Dimensions patent data, FDA PMA/510(k) administrative data, Kogan et al. (2017)"
+    },
+    {
+      "label": "Table 3 (tab:MarketComposition)",
+      "title": "Effect of Reclassification on Market Structure",
+      "estimator": "Stacked DiD OLS (Equation 1) with Conley-Taber inference. Col 1 is the pre-mean. Cols 2-5 use controls matched on (2) baseline prices across all CPTs, (3) device outcomes, (4) intuitive controls, (5) later-treated controls.",
+      "outcome_var": "Log outpatient procedure price (top row of each panel; MarketScan; price columns exist only for All CPTs and Matched), new-firm entry (FDA submission data and patent data), incumbent entry (FDA submission data and patent data). Row labels are in unresolved input files, so this list comes from the text.",
+      "key_regressors": [
+        "1{reclass} (post-reclassification indicator)"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber inference",
+      "sample_restriction": "Price data cover 1996-2013 only. Columns 4-5 omit prices. Price sample is the 3 linked Class III to II types and 15 linked Class II to I types (about 17,400 procedure codes and 182,200 procedure-year observations). Pre-mean prices are unlogged while estimates are logged.",
+      "data_source": "MarketScan claims, FDA PMA/510(k) data, Dimensions patents"
+    },
+    {
+      "label": "Table 4 (tab:AdverseEvent)",
+      "title": "Effect of Reclassification on Adverse Events",
+      "estimator": "Stacked DiD OLS (Equation 1) with Conley-Taber inference. Col 1 is the pre-mean. Cols 2-4 use matched, intuitive and later-treated controls.",
+      "outcome_var": "Annual serious adverse-event counts (hospitalizations, life-threatening events, deaths, and a composite of serious events including disability) and probability that any patent in a device-year emphasizes safety. Row labels are in unresolved input files, so this list comes from the text.",
+      "key_regressors": [
+        "1{reclass} (post-reclassification indicator)"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber inference",
+      "sample_restriction": "Panel A is Class III to II. Panel B is Class II to I. The later-treated column drops post-2015 observations for III to II. Matched controls use Mahalanobis distance on pre-event outcomes.",
+      "data_source": "FDA MAUDE, Dimensions patents (safety emphasis)"
+    },
+    {
+      "label": "Appendix Table (tab:ClassIIIRegnums_combined)",
+      "title": "Class III to II Down-Regulated Device Types (FDA-Initiated and Petitioned)",
+      "estimator": null,
+      "outcome_var": null,
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": "Panel A lists 12 FDA-initiated device types (main sample). Panel B lists 17 petitioned types (excluded from the main sample).",
+      "data_source": "Federal Register citations"
+    },
+    {
+      "label": "Appendix Table (tab:DeviceToProcedureLinkages)",
+      "title": "Treated Device Type to Procedure Linkages",
+      "estimator": null,
+      "outcome_var": null,
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": "Class III to II: 3 linked product codes (LNS, MAX, MLM). Class II to I: 15 linked product codes. Events must occur after 1996 and have outpatient claims.",
+      "data_source": "LLM-based (GPT-5-mini) concordance to CPT/HCPCS, MarketScan"
+    },
+    {
+      "label": "Appendix Table (tab:Robustness_Innovation)",
+      "title": "Robustness Matrix: Innovation (All estimators)",
+      "estimator": "Borusyak et al. (2021) imputation (levels), log(y+1) OLS, and quasi-Poisson, all with Conley-Taber inference where applicable",
+      "outcome_var": "Same innovation outcomes as Table 2 (patenting rate, device submissions, forward citations, patent value)",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber",
+      "sample_restriction": "Panel A Class III to II, Panel B Class II to I. Cols: pre-mean, matched, intuitive, later-treated.",
+      "data_source": "Dimensions, FDA administrative data, Kogan et al."
+    },
+    {
+      "label": "Appendix Table (tab:Robustness_MarketStructure)",
+      "title": "Robustness Matrix: Market Structure (All estimators)",
+      "estimator": "Borusyak imputation (prices use this estimator only; log price is always the outcome), log(y+1), quasi-Poisson",
+      "outcome_var": "Log procedure price; new-firm and incumbent entry",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber",
+      "sample_restriction": "Cols: pre-mean, All CPTs, matched, intuitive, later. Intuitive and later price columns blank.",
+      "data_source": "MarketScan, FDA PMA/510(k), Dimensions"
+    },
+    {
+      "label": "Appendix Table (tab:Robustness_Adverse)",
+      "title": "Robustness Matrix: Adverse Events (All estimators)",
+      "estimator": "Borusyak imputation, log(y+1), quasi-Poisson",
+      "outcome_var": "Serious adverse-event outcomes and safety mention (as in Table 4)",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber",
+      "sample_restriction": "Later-treated III to II drops post-2015",
+      "data_source": "FDA MAUDE, Dimensions"
+    },
+    {
+      "label": "Appendix Table (tab:Innovation_Spillovers)",
+      "title": "Reclassification Spillovers (Innovation)",
+      "estimator": "Stacked DiD OLS (Equation 1) with matched controls",
+      "outcome_var": "Innovation outcomes for device types closely related to treated types (row labels not in flattened text)",
+      "key_regressors": [
+        "1{reclass} (applied to related device types)"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber for confidence intervals; the note says standard errors allow clustering at the product-code level",
+      "sample_restriction": "Device types closely related to treated types",
+      "data_source": "Dimensions, FDA data"
+    },
+    {
+      "label": "Appendix Table (tab:ClassIIIRegnumswControls)",
+      "title": "Class III to II Device Types by Broad Device Category: Treated vs Intuitive Control",
+      "estimator": null,
+      "outcome_var": null,
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": "24 listed device types (treated flag and implantable flag). No life-sustaining devices.",
+      "data_source": "FDA classification data"
+    },
+    {
+      "label": "Appendix Table (tab:ClassIIRegnumsTreated)",
+      "title": "Class II to I Device Types by Broad Category, with Intuitive Controls",
+      "estimator": null,
+      "outcome_var": null,
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": "Counts of treated and intuitive control types and implants by category. No life-sustaining devices.",
+      "data_source": "FDA classification data"
+    },
+    {
+      "label": "Appendix Table (tab:Combined_DropNoCounts)",
+      "title": "Effects of Reclassification on Innovation, Market Structure, and Adverse Events (Zero-Count Units Excluded)",
+      "estimator": "Stacked DiD OLS (Equation 1) with Conley-Taber inference",
+      "outcome_var": "Innovation, market structure and adverse event outcomes as in Tables 2-4",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber",
+      "sample_restriction": "Drops device types with only zero counts for a given outcome over the whole panel (applied separately by outcome)",
+      "data_source": "Dimensions, FDA data, MAUDE, MarketScan"
+    },
+    {
+      "label": "Appendix Table (tab:Utilization, TableD11_Utilization)",
+      "title": "Utilization effects (log procedure counts)",
+      "estimator": "Stacked DiD OLS (Equation 1)",
+      "outcome_var": "Log annual procedure counts",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": null,
+      "sample_restriction": "Linked procedures in MarketScan. The table body is not in the flattened text; the main text says results are unstable across control groups.",
+      "data_source": "MarketScan"
+    },
+    {
+      "label": "Appendix Table (tab:SampleConstruction, TableD1)",
+      "title": "Sample construction",
+      "estimator": null,
+      "outcome_var": null,
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": "Body not in the flattened text. Cited for event sample construction (e.g., the 56 device types in the 1998 event).",
+      "data_source": null
+    },
+    {
+      "label": "Appendix Table (tab:ProbabilitySafetyMentionEffects_Robustness)",
+      "title": "Effect of Reclassification on Probability of Any Safety Mention (Robustness Across Alternative Approaches)",
+      "estimator": "DiD OLS (linear probability); approaches are a literal 'safety' keyword and an embedding-distance (BERT) measure at the 99th percentile threshold",
+      "outcome_var": "Indicator for any patent in device-type-year mentioning safety",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": null,
+      "sample_restriction": "Panel A Class II to I (N=9,856); Panel B Class III to II (N=1,056)",
+      "data_source": "Dimensions patents"
+    },
+    {
+      "label": "Appendix Tables (tab:impacts_vs_exp_3_2, tab:impacts_vs_exp_2_1)",
+      "title": "Device-level reclassification effects regressed on market age (Class III to II; Class II to I)",
+      "estimator": "OLS across treated device types",
+      "outcome_var": "Device-level DiD effect on severity share of serious events and on annual patent counts",
+      "key_regressors": [
+        "Market age at reclassification"
+      ],
+      "controls": [
+        "Baseline severity",
+        "Baseline patenting",
+        "Device-category fixed effects (product area)",
+        "FDA-initiated indicator (Class III to II only)",
+        "Device Priority Model score (Class II to I only)"
+      ],
+      "fixed_effects": [
+        "Device category"
+      ],
+      "clustering": null,
+      "sample_restriction": "Treated device types. Bodies not in the flattened text. The text reports a negative age slope in both pathways and linear fits crossing zero at about 30 years (III to II) and about 60 years (II to I).",
+      "data_source": "MAUDE, Dimensions, GPT-4o/hand-coded introduction years"
+    },
+    {
+      "label": "Appendix Table (tab:Innovation_nodrugs_A61only)",
+      "title": "Impact of Reclassification on Patenting Rates: Restricted Samples",
+      "estimator": "Stacked DiD OLS (Equation 1) with matched controls, Conley-Taber",
+      "outcome_var": "Patenting rate",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": "Conley-Taber",
+      "sample_restriction": "GPT-4o-identified device patents; CPC A61 excluding A61P patents",
+      "data_source": "Dimensions, GPT-4o screening"
+    },
+    {
+      "label": "Appendix Table (tab:BreakthroughPatentsEffects)",
+      "title": "Effect of Reclassification on Breakthrough Patents",
+      "estimator": "Quasi-Poisson, OLS, and OLS with log outcome (DiD)",
+      "outcome_var": "Yearly count of breakthrough patents (Kelly-Seru novelty index)",
+      "key_regressors": [
+        "1{reclass}"
+      ],
+      "controls": [],
+      "fixed_effects": [
+        "event-by-device-type",
+        "event-by-year"
+      ],
+      "clustering": null,
+      "sample_restriction": "Panel A Class III to II (N=1,584); Panel B Class II to I (N=11,748)",
+      "data_source": "Dimensions, Kelly and Seru (2021)"
+    },
+    {
+      "label": "Appendix Table (tab:CostBenefits, TableD15_CostBenefit)",
+      "title": "Back-of-the-envelope cost-benefit for Class II to I deregulation",
+      "estimator": null,
+      "outcome_var": "Annual net benefit per reclassified device type (about $28 million per the text)",
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": "Body not in the flattened text. Per the footnote: about $118 million effect on patent market value, 20% retained gives about $23.5 million, plus about $4.3 million of safety benefits (1.8 fewer hospitalizations at $22,000 and 0.4 fewer deaths at $10 million).",
+      "data_source": "Kogan et al. patent values, MAUDE, DiD estimates"
+    },
+    {
+      "label": "Appendix Table (Table_D14_summary_stats_by_class)",
+      "title": "Summary statistics by class",
+      "estimator": null,
+      "outcome_var": null,
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "clustering": null,
+      "sample_restriction": "Body not in the flattened text.",
+      "data_source": null
+    }
+  ],
+  "figures": [
+    {
+      "label": "Figure 1 (ContactLensCaseStudy)",
+      "description": "Annual patent filings, device submissions, and new-firm entry for daily-wear soft contact lenses (LPL, reclassified III to II in 1994) vs extended-wear soft contact lenses (LPM, stayed Class III). Raw time series with a vertical line at 1994."
+    },
+    {
+      "label": "Figure 3 (InnovationES)",
+      "description": "Event-study beta_k coefficients (Equation 2) with matched controls, 95% CIs (Conley-Taber for down-regulation). Panels: (a) patenting rate III to II (base 6.3/yr); (b) device submissions III to II (base 0.9/yr); (c) patenting rate II to I (base 14.8/yr); (d) device submissions II to I."
+    },
+    {
+      "label": "Figure 4 (MarketStructure)",
+      "description": "Event-study coefficients for market structure: (a) new firms patenting III to II (base 3.0/yr); (b) new firms patenting II to I (base 6.8/yr); (c) log procedure price III to II; (d) log procedure price II to I (only two years of pre-event claims)."
+    },
+    {
+      "label": "Figure 5 (ESProductSafety)",
+      "description": "Event-study of serious adverse events: (a) III to II (base 0.6/yr); (b) II to I (base 0.5/yr); (c) raw counts for the 15 normalizable II to I types; (d) the same types normalized by procedure volume (pre-mean 0.002 per procedure). Conley-Taber 95% CIs."
+    },
+    {
+      "label": "Figure 6 (SafetybyAsset)",
+      "description": "DiD estimates by firm asset tercile for Class II to I: (a) percent change in probability of at least one safety-emphasis patent; (b) percent change in probability of a serious adverse event. LPM with 95% CIs, public firms only."
+    },
+    {
+      "label": "Appendix Figure (Petitioned_IIItoII)",
+      "description": "Event study of patenting rate for petitioned (not FDA-initiated) III to II reclassifications (base 7.5 patents/yr), matched controls."
+    },
+    {
+      "label": "Appendix Figure (MktCompostition_IIItoII_Patents)",
+      "description": "Event studies of entry: (a) new entry (device data) III to II, base 0.1 firms/yr; (b) incumbent entry (device data) III to II, base 0.3; (c) incumbent entry (patent data) II to I, base 2.2; (d) incumbent entry (patent data) III to II, base 1.5."
+    },
+    {
+      "label": "Appendix Figure (ProductVariety)",
+      "description": "DiD percent changes in patents by LDA topic cluster, for (a) down-regulation and (b) deregulation, with 95% CIs."
+    },
+    {
+      "label": "Appendix Figure (FirmExperienceHeteroSimulation)",
+      "description": "DiD percent change in new device submissions for Class III to II by terciles of firm regulatory experience: (a) cumulative approval days; (b) cumulative product count. Conley-Taber 95% CIs. Text reports about 280% for the least experienced vs about 65% for the most experienced."
+    },
+    {
+      "label": "Appendix Figure (FirmSizeHetero)",
+      "description": "DiD estimates of patenting rate by firm asset tercile (public firms): (a) Class III to II; (b) Class II to I, with 95% CIs."
+    },
+    {
+      "label": "Appendix Figure (Safety_IItoI)",
+      "description": "Class II to I safety emphasis in patents: (a) raw trends in probability of safety mention, treated vs control; (b) event study with beta_-2 as reference."
+    },
+    {
+      "label": "Appendix Figure (DeviceTortCasesOverTime)",
+      "description": "Nexis Uni counts: (a) yearly medical device and drug tort cases, including those mentioning preemption, with a line at 1996 (Medtronic v. Lohr); (b) ratio of bankruptcy cases to tort claims for device firms."
+    },
+    {
+      "label": "Appendix Figure (Impact_by_experience)",
+      "description": "Device-level DiD estimates vs market age at reclassification with OLS fit: (a) serious-event effect III to II; (b) patenting effect III to II; (c) serious-event effect II to I; (d) patenting effect II to I. A dashed line marks the age where the fitted safety effect is zero."
+    },
+    {
+      "label": "Appendix Figure (DeviceExperienceCurrent)",
+      "description": "Histograms of market age (GPT-4o invention dates) for current (a) Class III and (b) Class II device types."
+    },
+    {
+      "label": "Appendix Figure (Innovation_3_2_Nodrugs)",
+      "description": "Event study of patenting rate for III to II using the restricted A61 (no drugs) patent sample."
+    },
+    {
+      "label": "Appendix Figure (Recall_Analysis)",
+      "description": "Class II to I recalls: (a) raw average recall counts, matched controls; (b) intuitive controls; (c) event study of recall counts (zeros imputed for event times -2 to 3 due to missing data)."
+    },
+    {
+      "label": "Appendix Figure (SafetyRecalls_IItoI_2015)",
+      "description": "2015 Class II to I event: (a) event study of serious adverse events; (b) event study of recalls; (c) raw mean recall trends (2000-2023)."
+    },
+    {
+      "label": "Appendix Figure (Innovation_2_1_2017)",
+      "description": "Event study of new firms patenting after the 2015 Class II to I event, matched controls."
+    },
+    {
+      "label": "Appendix Figure (AdvEvent_by_Reporter)",
+      "description": "Event study of serious adverse events for Class II to I by reporter type: (a) non-manufacturer reports; (b) manufacturer reports."
+    },
+    {
+      "label": "Appendix Figure (event_distribution)",
+      "description": "Histograms of the number of (a) down-regulation and (b) deregulation events by year."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+\begin{table}[h!]
+\centering
+\caption{\textbf{Relationship Between Impacts and Device Experience (II to I)}}
+\label{tab:impacts_vs_exp_2_1}
+\resizebox{.62\textwidth}{!}{\begin{tabular}{lcc}
+\hline
+\hline
+\textbf{Variable} & \textbf{(1)} & \textbf{(2)} \\
+\midrule
+Device Experience (years) & -0.0003+ & -0.1058 \\
+ & (0.0002) & (0.0685) \\
+Intercept & 0.0163 & -11.0336 \\
+ & (0.0191) & (8.3486) \\
+Baseline Serious Adverse Events & -0.0093 & -0.3647 \\
+ & (0.0075) & (3.1028) \\
+Device Priority Model Score & 0.0277 & 4.2571 \\
+ & (0.0444) & (18.3997) \\
+Cardiovascular Devices & -0.0115 & 16.3703 \\
+ & (0.0371) & (15.4027) \\
+Clinical Chemistry And Clinical Toxicology Devices & 0.0029 & -22.6099 \\
+ & (0.0371) & (15.6071) \\
+Dental Devices & 0.0206 & 2.6410 \\
+ & (0.0479) & (19.9891) \\
+Ear, Nose, And Throat Devices & -0.0800* & 18.6166 \\
+ & (0.0389) & (16.4118) \\
+Gastroenterology-Urology Devices & 0.0045 & 15.6497+ \\
+ & (0.0214) & (9.2684) \\
+General And Plastic Surgery Devices & -0.1418 & 5.3578 \\
+ & (0.1037) & (43.0702) \\
+General Hospital And Personal Use Devices & 0.0268 & 12.8010 \\
+ & (0.0261) & (11.1145) \\
+Hematology And Pathology Devices & 0.0046 & 3.9181 \\
+ & (0.0389) & (16.3574) \\
+Immunology And Microbiology Devices & -0.0077 & 2.0851 \\
+ & (0.0207) & (9.0568) \\
+Neurological Devices & 0.0346 & 15.9747 \\
+ & (0.0728) & (30.2834) \\
+Obstetrical And Gynecological Devices & 0.0411 & 21.0217 \\
+ & (0.0376) & (15.9464) \\
+Ophthalmic Devices & -0.0041 & 20.8908 \\
+ & (0.0343) & (14.5629) \\
+Orthopedic Devices & -0.0296 & 16.9783 \\
+ & (0.0726) & (30.2304) \\
+Physical Medicine Devices & 0.0379 & 13.2064 \\
+ & (0.0243) & (10.2633) \\
+Radiology Devices & -0.0071 & 10.6918 \\
+ & (0.0271) & (11.6077) \\
+Baseline Patent Count & --- & 2.1629*** \\
+ & --- & (0.0833) \\
+\midrule
+N & 293 & 293 \\
+Serious-Event Estimate & Yes & No \\
+Patenting Estimate & No & Yes \\
+\bottomrule
+
+\end{tabular}}
+\caption*{
+\begin{footnotesize}Note: The regression relates device-level DiD estimates for (1) serious adverse events and (2) patenting activity to each device type's market age (FDA years of experience) and other covariates, including baseline patenting rates. \textquotedblleft---\textquotedblright\ indicates variables excluded from a given specification. To increase power, all deregulated device types with at least one submission are included. Fixed effects for part descriptions are included, with anesthesiology devices as the omitted group. +, *, **, *** denote significance at 0.10, 0.05, 0.01, 0.001 levels.
+\end{footnotesize}
+}
+\end{table}

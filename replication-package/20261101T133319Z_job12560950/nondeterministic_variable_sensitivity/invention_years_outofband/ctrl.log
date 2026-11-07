@@ -1,0 +1,15 @@
+system prompt: 1259 chars, 4 few-shot examples
+in-band (|year-1959|<=6): 612 | out-of-band control: 300 | total 300 x 5 draws = 1500 calls
+  150/1500
+  300/1500
+  450/1500
+  600/1500
+  750/1500
+  900/1500
+  1050/1500
+  1200/1500
+  1350/1500
+  1500/1500
+
+done in 162s calls=1500 errors=0
+tokens: prompt=522,325 completion=59,036

@@ -1,0 +1,61 @@
+\begin{table}[t]
+\centering
+\caption{\textbf{Summary Statistics by FDA Class}}
+\label{tab:SummaryStatistics_AllClasses_Reorg}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.42\textwidth}*3{>{\centering\arraybackslash}p{0.17\textwidth}}@{}}
+\hline
+\hline
+ \textbf{Panel A: FDA Administrative Data} & \textbf{Class I} & \textbf{Class II} & \textbf{Class III} \\
+\midrule
+\emph{Device submissions} & & & \\
+\quad Total submissions (N) & 30{,}797 & 118{,}820 & 3{,}395 \\
+\quad Number of device types (N) & 1{,}560 & 2{,}496 & 59 \\[2pt]
+\quad Submissions per device type & 19.74 & 47.60 & 57.54 \\
+ & {\scriptsize [78.13]; [1, 1{,}927]} & {\scriptsize [131.24]; [1, 2{,}457]} & {\scriptsize [148.08]; [1, 795]} \\[2pt]
+\quad Total submitting firms (N) & 3{,}876 & 9{,}129 & 80 \\[2pt]
+\quad Firms per device type & 10.52 & 19.26 & 6.64 \\
+ & {\scriptsize [29.80]; [1, 812]} & {\scriptsize [38.49]; [1, 622]} & {\scriptsize [10.86]; [1, 47]} \\[2pt]
+\quad Firm regulatory proficiency* & 6.32 yrs & 9.42 yrs & 41.35 yrs \\
+ & {\scriptsize [16.81 yrs]; [0, 228]} & {\scriptsize [22.24 yrs]; [0, 346]} & {\scriptsize [54.87 yrs]; [0, 371]} \\
+\addlinespace
+\emph{Adverse event reports (AERs)} & & & \\
+\quad Total AERs (N) & 475{,}782 & 4{,}510{,}436 & 976{,}692 \\
+\quad Device types reporting (N) & 1{,}264 & 1{,}975 & 101 \\[2pt]
+\quad Adverse events per device type & 376.41 & 2{,}283.77 & 9{,}670.22 \\
+ & {\scriptsize [2{,}550.82]; [1, 52{,}526]} & {\scriptsize [16{,}259.98]; [1, 409{,}685]} & {\scriptsize [32{,}432.55]; [1, 228{,}892]} \\[2pt]
+\quad Serious events per device type & 25.64 & 344.30 & 2{,}871.03 \\
+ & {\scriptsize [107.30]; [1, 1{,}547]} & {\scriptsize [2{,}401.95]; [1, 46{,}502]} & {\scriptsize [13{,}442.19]; [1, 115{,}097]} \\[2pt]
+\quad AERs with matched firm assets (N) & 475{,}779 & 4{,}510{,}431 & 976{,}692 \\[2pt]
+\quad Assets of offending firms & \$33.91M & \$33.97M & \$34.04M \\
+ & {\scriptsize [\$52.55M]; [\$0.04M, \$4.51B]} & {\scriptsize [\$50.55M]; [\$0.04M, \$4.51B]} & {\scriptsize [\$51.45M]; [\$0.04M, \$4.51B]} \\
+\midrule
+\end{tabular}
+
+\vspace{2pt}
+
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.42\textwidth}*3{>{\centering\arraybackslash}p{0.17\textwidth}}@{}}
+ \textbf{Panel B: Dimensions Device Patents} & \textbf{Class I} & \textbf{Class II} & \textbf{Class III} \\
+\midrule
+Total patents (N) & 445{,}625 & 637{,}184 & 24{,}466 \\[2pt]
+Patents per device type & 194.77 & 205.08 & 179.90 \\
+ & {\scriptsize [282.47]; [1, 4{,}203]} & {\scriptsize [333.18]; [1, 6{,}156]} & {\scriptsize [210.92]; [9, 1{,}318]} \\[2pt]
+Citations per patent & 11.79 & 12.28 & 10.59 \\
+ & {\scriptsize [8.74]; [0, 78]} & {\scriptsize [8.99]; [0, 79]} & {\scriptsize [8.51]; [0, 71]} \\[2pt]
+Patent market valuation & \$4.61M & \$4.61M & \$4.65M \\
+ & {\scriptsize [\$6.34M]; [\$0.01M, \$344.18M]} & {\scriptsize [\$6.25M]; [\$0.03M, \$228.06M]} & {\scriptsize [\$6.55M]; [\$0.02M, \$172.17M]} \\[2pt]
+Applicant assets & \$61.69M & \$61.10M & \$61.87M \\
+ & {\scriptsize [\$191.05M]; [\$0.04M, \$13.52B]} & {\scriptsize [\$185.57M]; [\$0.04M, \$13.52B]} & {\scriptsize [\$153.19M]; [\$0.15M, \$3.57B]} \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft,para]\footnotesize
+\item[] Note: For rows with distributional stats, the first line shows the \emph{mean}; the second line lists \emph{SD} and \emph{range} in brackets. Panel~A reports FDA administrative aggregates; Panel~B reports Dimensions patent statistics. Patent market valuation data are from \citet{kogan:2017}. Firm total assets are from CRSP/Compustat (proxy for firm size); market values and applicant assets are observed only for patents filed by public firms (\(\sim\)100\% of patents). *``Regulatory proficiency'' indicates the total number of days a firm has experienced approval delays across all its submitted devices.
+\end{tablenotes}
+
+\end{threeparttable}
+\end{table}

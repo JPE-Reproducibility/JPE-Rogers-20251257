@@ -1,0 +1,51 @@
+baseline runs: 4 (hbaseline, hbaseline2, hbaseline3, hbaseline4)
+  all baseline runs agree: True
+reference baseline: hbaseline4   draws: 10
+  hdraw1: 26 estimates
+  hdraw2: 26 estimates
+  hdraw3: 17 estimates
+  hdraw4: 17 estimates
+  hdraw5: 25 estimates
+  hdraw6: 26 estimates
+  hdraw7: 26 estimates
+  hdraw8: 21 estimates
+  hdraw9: 26 estimates
+  hdraw10: 26 estimates
+
+II->I billed, BJS, all CPTs   [load-bearing]
+  deposited -0.3200
+  draws n=10  mean -0.2970  SD 0.1091  range [-0.4600, -0.1600]
+  sorted: -0.46, -0.43, -0.40, -0.37, -0.30, -0.28, -0.25, -0.16, -0.16, -0.16
+  sign preserved in every draw: True   deposited inside the draw range: True
+
+II->I billed, CT, all CPTs    [load-bearing]
+  deposited -0.3160
+  draws n=9  mean -0.2853  SD 0.1102  range [-0.4620, -0.1570]
+  sorted: -0.46, -0.43, -0.37, -0.30, -0.28, -0.24, -0.16, -0.16, -0.16
+  sign preserved in every draw: True   deposited inside the draw range: True
+  unavailable in: hdraw5
+
+II->I billed, BJS, matched
+  deposited -0.2300
+  draws n=10  mean -0.2350  SD 0.0762  range [-0.3500, -0.0800]
+  sorted: -0.35, -0.32, -0.32, -0.24, -0.24, -0.22, -0.21, -0.20, -0.17, -0.08
+  sign preserved in every draw: True   deposited inside the draw range: True
+
+III->II billed, BJS, all CPTs [fragile panel]
+  deposited +0.0600
+  draws n=7  mean +0.0700  SD 0.1035  range [-0.1100, +0.2300]
+  sorted: -0.11, +0.01, +0.01, +0.07, +0.14, +0.14, +0.23
+  sign preserved in every draw: False   deposited inside the draw range: True
+  unavailable in: hdraw3, hdraw4, hdraw8
+
+III->II billed, BJS, expert   [control]
+  deposited -0.0900
+  draws n=10  mean -0.0900  SD 0.0000  range [-0.0900, -0.0900]
+  sorted: -0.09, -0.09, -0.09, -0.09, -0.09, -0.09, -0.09, -0.09, -0.09, -0.09
+  sign preserved in every draw: True   deposited inside the draw range: True
+
+III->II billed, CT, expert    [control]
+  deposited -0.1860
+  draws n=10  mean -0.1860  SD 0.0000  range [-0.1860, -0.1860]
+  sorted: -0.19, -0.19, -0.19, -0.19, -0.19, -0.19, -0.19, -0.19, -0.19, -0.19
+  sign preserved in every draw: True   deposited inside the draw range: True

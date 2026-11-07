@@ -1,0 +1,72 @@
+{
+  "_comment": "Deliberately reviewed synthetic-payload migration record consumed by verify_payload_migration.py (run by the certification harness before a reference is frozen). It records the file-set change the deposit ships: the payload went 118 -> 116 files in source commit 8d7a5a0 (2026-10-06), which dropped the two MarketScan twins named under `removed` and updated simulated_data_sha256.txt and simulated_data_expected_files.txt. verify_payload_migration.py's no-change path requires that a record on file describe, and be signed for, the shipped payload; an unsigned record fails in its default (final/seal) mode and a stage-1 rehearsal may proceed only with FDA_ALLOW_UNSIGNED_MIGRATION=1. SIGN-OFF: reviewed and signed by the author on 2026-10-13 (status, reviewer, review_date below). The 2026-09-30 content-only migration and the earlier ones are preserved under _previous_migrations.",
+  "status": "REVIEWED",
+  "prior_file_count": 118,
+  "target_file_count": 116,
+  "added": [],
+  "removed": [
+    {
+      "path": "simulated_data/synthetic_marketscan/inpatient_combined_censored.csv",
+      "sha256": "cf9ad674def2d984055d621b36f4c746838823aa4e3daa193b08ca299544e02d"
+    },
+    {
+      "path": "simulated_data/synthetic_marketscan/utilization_by_PC_oct22_24.csv",
+      "sha256": "2a3bd055a0d4bbb26f9336030d32b86cef13690e41c17984e39637e978d57fa3"
+    }
+  ],
+  "reason": "File-set migration of 2026-10-06 (source commit 8d7a5a0, which also deposited the recovered original MarketScan extraction program gen_00b_marketscan_extraction.py): the two MarketScan-derived inputs that no shipped analysis program reads were dropped from the deposit, so their simulated twins were removed from the payload. Both are documented as unread in the code itself -- gen_00b_marketscan_extraction.py:43 states inpatient_combined_censored.csv 'is not read by any analysis step', and 04_event_studies.py:526 records that utilization_by_PC_oct22_24.csv 'used to be read here into an unused variable'. No file was added; no remaining file's content changed by this migration.",
+  "target_manifest_sha256": "7abddbf818c059b8a8121749af90f2826d771bb81b94a423d49cd85fd67d0149",
+  "reviewer": "Parker Rogers",
+  "review_date": "2026-10-13",
+  "_previous_migrations": [
+    {
+      "_comment": "Deliberately reviewed synthetic-payload migration record consumed by verify_payload_migration.py (run by the certification harness before a reference is frozen). It authorizes ONE reviewed change to the shipped synthetic payload against the previously committed baseline. SIGN-OFF: reviewed and signed by the author on 2026-09-26 (status, reviewer, review_date below). An unsigned record fails verify_payload_migration.py in its default (final/seal) mode; a stage-1 rehearsal may proceed only with FDA_ALLOW_UNSIGNED_MIGRATION=1. NOTE: the committed baseline manifest simulated_data_sha256.txt was regenerated from the reviewed 118-file payload on 2026-09-18, so a clean-room regeneration that reproduces that payload takes verify_payload_migration.py's PAYLOAD-NEUTRAL path and never consults this record; the record exists so the 115 -> 118 change the author must sign is written down, and so any drift away from the reviewed baseline still fails closed.",
+      "status": "REVIEWED",
+      "prior_file_count": 115,
+      "target_file_count": 118,
+      "added": [
+        {
+          "path": "simulated_data/synthetic_maude_linkage/manual_permno_corrections.csv",
+          "sha256": "f56db095ff53aadeccd65e1164396d7419e6f24bc80f1a9f4fb33c3fd0adc561"
+        },
+        {
+          "path": "simulated_data/synthetic_patents/Applicant_Cites_Only.csv",
+          "sha256": "c86c64ce0aafc71e7c8533c58826c885f21d77166836f92571e4ff2fe7baf897"
+        },
+        {
+          "path": "simulated_data/synthetic_price_links/FDA_HCPCS_Xwalk_Moazzam.csv",
+          "sha256": "373093fda78acb8cf744e29117227d33a3d51e87673e3c41ef33cf696ba0decd"
+        }
+      ],
+      "removed": [],
+      "reason": "Three simulated twins were added after the author-signed 114 -> 115 migration of 2026-09-10, so the payload is now 118 files. (1) synthetic_patents/Applicant_Cites_Only.csv gives the applicant-citation input a twin, without which the simulated route could not run the citation step from raw. (2) synthetic_maude_linkage/manual_permno_corrections.csv is the twin of the restricted manufacturer->PERMNO crosswalk; without it the simulated route recorded the registered in-text scalar maude_handlinked_manufacturers as a missing input and failed the strict in-text gate on both routes. (3) synthetic_price_links/FDA_HCPCS_Xwalk_Moazzam.csv is the twin of the expert HCPCS crosswalk, without which the price analysis collapsed to two treated device types and the four registered price scalars could not be computed. Nothing was removed: the 114 -> 115 migration had already retired synthetic_dimensions_wrds/all_adv_events_w_permno5.csv, and it is absent from both the 115-file and the 118-file payloads. The 2026-09-18 remediation additionally rewrote gen_00i's fill rule for manual_permno_corrections.csv so the twin carries no per-column fill count taken from the restricted file; the sha256 above is the post-change twin, and the payload must be regenerated before the next staging. 2026-09-18 (procedure-code-domain remediation): the synthetic procedure-code domain shared by the simulated MarketScan claims, the two GPT price-link twins and this expert-concordance twin moved from an 'S' prefix to a 'Y' prefix, because 'S' is a letter HCPCS Level II actually uses and the synthetic codes therefore coincided with real Level-II S-codes carried by the public expert crosswalk. Five payload files change content as a result (the three synthetic_price_links twins and the two synthetic_marketscan claims extracts); nothing is added or removed, so the added/removed lists are unchanged and only the pinned sha256 of the expert-concordance twin and the target manifest sha256 move.",
+      "target_manifest_sha256": "206a265efdda868cfbeb75f95575f38e8d835f4c5307fcd538f2e817e994cdb1",
+      "reviewer": "Parker Rogers",
+      "review_date": "2026-09-26"
+    },
+    {
+      "_comment": "Deliberately reviewed synthetic-payload migration record consumed by verify_payload_migration.py (run by the certification harness before a reference is frozen). It authorizes ONE reviewed change to the shipped synthetic payload against the previously committed baseline. SIGN-OFF: reviewed and signed by the author on 2026-09-26 (status, reviewer, review_date below). An unsigned record fails verify_payload_migration.py in its default (final/seal) mode; a stage-1 rehearsal may proceed only with FDA_ALLOW_UNSIGNED_MIGRATION=1. NOTE: the committed baseline manifest simulated_data_sha256.txt was regenerated from the reviewed 118-file payload on 2026-09-18, so a clean-room regeneration that reproduces that payload takes verify_payload_migration.py's PAYLOAD-NEUTRAL path and never consults this record; the record exists so the 115 -> 118 change the author must sign is written down, and so any drift away from the reviewed baseline still fails closed.",
+      "status": "REVIEWED",
+      "prior_file_count": 118,
+      "target_file_count": 118,
+      "added": [],
+      "removed": [],
+      "reason": "Content-only migration of 2026-09-29: the committed size-family parameters were re-committed under the T6 bounded-influence rule (gen_00a.fit_size_family chooses the finest of 3/2/1 significant figures at which removing one real record from the largest group or one singleton changes neither committed moment by more than one unit of its last significant figure), after the first complete run of the confidential disclosure suite (2026-09-29) showed six size families moving by several units. Only five families changed (matched_pairs_intuitive_2_1.csv SSE -> 1 s.f.; new_patent_analysis/all_device_patents_w_pc.csv cpc_class, cpc_subclass, patent_application_type, series_code -> 2 s.f.); product codes, entity universes and the public master skeleton are identical. The payload was regenerated clean-room from the new parameters: 1 of 118 files change content, nothing is added or removed, so the presence delta is empty and only the target manifest sha256 moves.",
+      "target_manifest_sha256": "4ef6b728667fb4e10c57b8933aff73297e2e37080c50c384845426ca92308ad0",
+      "reviewer": "Parker Rogers",
+      "review_date": "2026-09-29"
+    },
+    {
+      "_comment": "Deliberately reviewed synthetic-payload migration record consumed by verify_payload_migration.py (run by the certification harness before a reference is frozen). It authorizes ONE reviewed change to the shipped synthetic payload against the previously committed baseline. SIGN-OFF: reviewed and signed by the author on 2026-09-26 (status, reviewer, review_date below). An unsigned record fails verify_payload_migration.py in its default (final/seal) mode; a stage-1 rehearsal may proceed only with FDA_ALLOW_UNSIGNED_MIGRATION=1. NOTE: the committed baseline manifest simulated_data_sha256.txt was regenerated from the reviewed 118-file payload on 2026-09-18, so a clean-room regeneration that reproduces that payload takes verify_payload_migration.py's PAYLOAD-NEUTRAL path and never consults this record; the record exists so the 115 -> 118 change the author must sign is written down, and so any drift away from the reviewed baseline still fails closed.",
+      "status": "REVIEWED",
+      "prior_file_count": 118,
+      "target_file_count": 118,
+      "added": [],
+      "removed": [],
+      "reason": "Content-only migration of 2026-09-30: the committed schema contract (simulation_schema_contract.json) was re-committed under the T6 bounded-influence rule for its rounded dimensions -- generate_simulation_schema_contract._rounded_count now commits two significant figures plus exactly one rounding step (strictly above the exact count; one real record moves it by at most one step), replacing a hash-seeded offset keyed on the exact count that the confidential disclosure suite's C4 check found to commit different values for n and n-1 rows (confidential suite run of 2026-09-30). 5 of 5 MarketScan and 48 of 71 Nexis row counts and 54 of 71 Nexis cardinalities move; columns, kinds, formats, the file set, the simulation parameters, the theta table and the public skeleton are unchanged. The payload was regenerated clean-room from the new contract (seed 20260803): 74 of 118 files change content (the 5 MarketScan twins and 69 Nexis twins), nothing is added or removed, so the presence delta is empty and only the target manifest sha256 moves. The 2026-09-29 parameter migration is preserved under _previous_migrations.",
+      "target_manifest_sha256": "644ff5369f0bd186f900a72fbbed94f3b7e618168fc914b5eceeb52338964956",
+      "reviewer": "Parker Rogers",
+      "review_date": "2026-09-30"
+    }
+  ]
+}

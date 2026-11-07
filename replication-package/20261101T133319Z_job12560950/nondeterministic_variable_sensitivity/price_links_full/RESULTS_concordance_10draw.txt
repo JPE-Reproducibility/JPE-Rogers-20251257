@@ -1,0 +1,19 @@
+pooled 2 response file(s), 3370 calls, 10 draws
+=== DECISION STABILITY, 337 items x 10 draws, gpt-5-mini-2025-08-07 ===
+  unanimous no_link                186/337  (55%)
+  decision MIXED across draws      100/337  (30%)
+  unanimous link                    51/337  (15%)
+
+=== CPT CODE SET ===
+  mean pairwise Jaccard, ALL items (empty==empty counts as agreement): 0.866
+  mean pairwise Jaccard, items unanimously 'link' (n=47) : 0.817
+  of the 51 unanimous-'link' items, identical code set in all 10 draws: 30 (59%)
+
+=== vs DEPOSITED 2025-09-22 ===
+  all 10 draws reproduce deposited decision: 234/337 (69%)
+  items STABLE across draws but DIFFERENT from deposited (true drift): 3/337 (1%)
+  -> so disagreement with the deposited file is partly internal instability, not model drift
+
+=== flip rate by direction ===
+  2to1: 86/301 items flip the decision (29%)
+  3to2: 14/36 items flip the decision (39%)

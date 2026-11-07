@@ -1,0 +1,50 @@
+\begin{table}[h!]
+\centering
+\caption{\textbf{Treated Sample Construction and Coverage}}
+\label{tab:SampleConstruction}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{Down-Regulation (III to II)}
+& \multicolumn{2}{c}{Deregulation (II to I)} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+& $N$ & \% & $N$ & \% \\
+\midrule
+\multicolumn{5}{l}{\textbf{A. Construction of treated sample}} \\[2pt]
+Federal Register reclassified device types
+  & 31 & 100 & 356 & 100 \\
+Excluding atypical reclassifications\textsuperscript{a}
+  & 29 & 94 & n/a & n/a \\
+FDA-initiated only (excluding petition-driven cases)
+  & 12 & 39 & n/a & n/a \\
+With $\geq$1 pre-reclassification patent
+  & 12 & 39 & 130 & 37 \\
+Final treated device-type sample
+  & 12 & 39 & 130 & 37 \\
+\\[-2pt]
+\multicolumn{5}{l}{\textbf{B. Estimation-sample coverage by outcome}} \\[2pt]
+Patent counts, forward citations, safety emphasis
+  & 12 & 100 & 130 & 100 \\
+Patent market value\textsuperscript{b}
+  & 12 & 100 & 130 & 100 \\
+Device submissions\textsuperscript{c}
+  & 12 & 100 & n/a & n/a \\
+Adverse events
+  & 12 & 100 & 130 & 100 \\
+Price and utilization\textsuperscript{d}
+  & 3 & 25 & 15 & 12 \\
+Public-firm heterogeneity\textsuperscript{e}
+  & 12 & 100 & 130 & 100 \\
+\bottomrule
+\end{tabular}}
+
+\vspace{3mm}
+
+\caption*{\footnotesize
+\textit{Note:} Panel~A traces the treated device-type sample from the Federal Register reclassification universe to the final analysis sample. Panel~B reports, for each outcome group, the number and share of treated device types that enter the corresponding estimating sample. Patent counts, forward citations, and safety-emphasis measures are constructed from all USPTO grants in the Dimensions patent database, covering both public and private firms. In device-type-years with no patenting, these patent outcomes are coded as zero. In device-type-years with no reported adverse events, adverse-event counts are coded as zero. All such zero-valued observations enter the regressions. Tables~\ref{tab:Combined_DropNoCounts} report robustness estimates excluding device types whose outcome sum equals zero over the full sample period; because this restriction is applied separately by outcome, sample sizes can differ slightly across specifications.\\[3pt]
+\textsuperscript{a}Two atypical III-to-II cases are excluded: LTT (antimicrobial susceptibility panels), a preamendment-to-Class~II reclassification rather than a III-to-II reclassification; and HRD (soft-lens thermal sterilizer), a commercially obsolete product with no device submissions after 1983, well before its 1997 reclassification.\\
+\textsuperscript{b}Patent market values follow \citet{kogan:2017} and are observed only for publicly traded assignees. Device-type-years in which patenting is attributable only to private firms are coded as zero rather than excluded, so the device-type sample is identical across patent-based outcomes.\\
+\textsuperscript{c}Class~I devices are generally exempt from premarket submission requirements, so device-submission outcomes are not defined for II-to-I reclassifications.\\
+\textsuperscript{d}Requires linkage to MarketScan claims (1996--2013) and outpatient procedure mappings, restricting the sample to post-1996 reclassification events with usable procedure links.\\
+\textsuperscript{e}Uses firm assets from CRSP/Compustat and is the only specification restricted to publicly listed firms.}
+\end{table}

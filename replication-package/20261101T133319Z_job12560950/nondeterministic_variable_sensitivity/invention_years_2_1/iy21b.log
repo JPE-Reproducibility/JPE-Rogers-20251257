@@ -1,0 +1,12 @@
+system prompt: 1259 chars, 4 few-shot examples
+items: 293 product codes x 5 draws (indices 5-9) = 1465 calls | model=gpt-4o-2024-08-06 temperature=0
+  200/1465
+  400/1465
+  600/1465
+  800/1465
+  1000/1465
+  1200/1465
+  1400/1465
+
+done in 190s calls=1465 errors=0
+tokens: prompt=505,345 completion=57,210

@@ -1,0 +1,3 @@
+b9f9ee2aea02c556475487668cf21fcccff0ef07cafd9369ce9100752b4d41a8  fda_np126.sif
+# SHA-256 of the reference container image: the Apptainer/Singularity `.sif` inside which this package's outputs are byte-reproducible. The certified file `fda_np126.sif` is included in this deposit; a registry pull converted with Apptainer is the same software but is not byte-deterministic and will not match this value (see docker/DOCKER_GUIDE.md section 2).
+# Check your copy with `sha256sum fda_np126.sif`, which must print the line above. The certification harness (certification/certify_fromraw_route.sh) compares the image it is given against the value passed as --image-sha256; pass this value to make it the same check.

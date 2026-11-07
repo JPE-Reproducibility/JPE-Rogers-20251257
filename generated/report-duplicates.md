@@ -1,0 +1,71 @@
+### Duplicate Files Report
+
+We found the following duplicate files:
+
+| Filename | Size (MB) | Checksum (MD5) |
+|:---------|----------:|:--------------|
+| 20261101T133319Z_job12560950/code/modules/__init__.py | 0.0 | da39a3ee5e6b4b0d3255bfef95601890afd80709 |
+| 20261101T133319Z_job12560950/output-simulated/tables/safety_embedding_percentile_used.txt | 0.0 | 1a7a1fb0e4b609d07e543bf1df18528bba5bd264 |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_2_1_Estimates_NoLog_xi_latest_oct22_24.csv | 0.0 | 35ace9cd969070986c3ad7e39ad9a8c70f7d8f9a |
+| 20261101T133319Z_job12560950/output/tables/exp_impact_zero_crossings.csv | 0.0 | ddbd7b91862b0491ccd8b343d96b80e535d9942f |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_3_2_Estimates_NoLog_xi_latest_oct22_24.csv | 0.0 | f4ba369d310673ff6e9a31bb7709f8942f257aed |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_poisson_oct22_24.csv | 0.0 | 9a903e57fbeacca894b046cef04d81d6333c4b79 |
+| 20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_oct22_24.csv | 0.0 | f635800268cd33257fb568d8d4184b5aacefb88b |
+| 20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv | 0.0 | 3b3de4e99b8f3d9089b7c847af88027b0b1dfd4d |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv | 0.0 | 7b926413e9cf2598d7ecd47941c5e5b33d5651dd |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_Log_Intuitive_oct22_24.csv | 0.0 | 376b366c59669c27aa9a990710dcf5734544c332 |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_No0_oct22_24.csv | 0.0 | 42c44cbe4aa6bae04e8a9faa2c445c8e6ebbfc3f |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_No0_oct22_24.csv | 0.0 | fb6d6e27555f9a8fe6b5e9b2007bdd454234e3e5 |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_Log_LaterTreat_oct22_24.csv | 0.0 | 3beda00db954b8f0c3da07da9e72534673e4e51d |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_oct22_24.csv | 0.0 | fbc1261f68c5eed79abb1379f8e4c0eb700eb8bc |
+| 20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv | 0.0 | bc08281db8a13ec3672a8d97c009ac7c84b0befc |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/output-simulated/tables/model_v_serious_est_3_2.csv | 0.0 | 36f2a276098fc17b48a625b8f842bba3df78e5a6 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/model_patent_est_3_2.csv | 0.0 | ded3a0b8c9677d941570839f22119278f4486614 |
+| 20261101T133319Z_job12560950/output-simulated/tables/dpm_decile_ratio.csv | 0.0 | 142f085d7c51a744741eaad562a9c89be79e7b60 |
+| 20261101T133319Z_job12560950/output-simulated/tables/model_v_serious_est_2_1.csv | 0.0 | 3922b0f5121cecf2b1679afc6b32b093978e5f1e |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/results/draw2/price_utilization_estimates.csv | 0.0 | 78adcadc37a3208f5fdcefb470fca37b282ba8d9 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/results/draw1/price_utilization_estimates.csv | 0.0 | 98a3323b3e2c07b88beadb5b9c01948e65be1b13 |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline/price_utilization_estimates.csv | 0.0 | 9898859a1cba2cfe73b588ab98b37c09b852206b |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline2/price_utilization_estimates.csv | 0.0 | 9898859a1cba2cfe73b588ab98b37c09b852206b |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline3/price_utilization_estimates.csv | 0.0 | 9898859a1cba2cfe73b588ab98b37c09b852206b |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline4/price_utilization_estimates.csv | 0.0 | 9898859a1cba2cfe73b588ab98b37c09b852206b |
+| 20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/results/baseline/price_utilization_estimates.csv | 0.0 | 9898859a1cba2cfe73b588ab98b37c09b852206b |
+| 20261101T133319Z_job12560950/output/tables/price_utilization_estimates.csv | 0.0 | 9898859a1cba2cfe73b588ab98b37c09b852206b |
+| 20261101T133319Z_job12560950/output-simulated/figures/Distribution_of_3_over_years.png | 0.15 | 8989ca6c03b44c19ff85121933ae47b9d2f6041b |
+| 20261101T133319Z_job12560950/output-simulated/figures/Distribution_of_2_over_years.png | 0.16 | 2e9b37bb7b302519f2a348ae1450be085f5d7219 |
+| 20261101T133319Z_job12560950/output-simulated/figures/ContactLens_firms.png | 0.17 | 62351b0656945a27ba0a5fe44cbef40a85427170 |
+| 20261101T133319Z_job12560950/output-simulated/figures/2_1_nolog_dev_count_solo.png | 0.17 | d9b388321a43d26fb7fa68fab4b51b56f4a34f29 |
+| 20261101T133319Z_job12560950/output-simulated/figures/Distribution_of_3_2_over_years.png | 0.18 | 49a426b05ba0c391c8b3484a5401bd39d2ae1fc9 |
+| 20261101T133319Z_job12560950/output-simulated/figures/ContactLens_submissions.png | 0.22 | fce94eef0fdc8ac4130d563a2c8c466531a7b1a7 |
+| 20261101T133319Z_job12560950/output/figures/Data_new_latest.png | 0.24 | 7827860a6fbd6856e62f029c2f0b9d72738b387d |
+| 20261101T133319Z_job12560950/output-simulated/figures/Data_new_latest.png | 0.24 | 7827860a6fbd6856e62f029c2f0b9d72738b387d |
+| 20261101T133319Z_job12560950/output-simulated/figures/Figure_D14_recall_2015_L.png | 0.25 | 17c937d5c4903904fdb7f8cc723694d1359240aa |
+| 20261101T133319Z_job12560950/output-simulated/figures/2_1_no_logv_serious_2016_oct22_24.png | 0.25 | 7fd45078d79130eebce0ba0d0810ec0208ce1d5a |
+| 20261101T133319Z_job12560950/output-simulated/figures/Figure_D14_recall_2015_D.png | 0.26 | 9a1cea988da525d00da5ab1edd5b9d3bb2d77041 |
+| 20261101T133319Z_job12560950/output-simulated/figures/Recalls_2017.png | 0.26 | c5da707851ea4c49376c4dbd70172df361fe3504 |
+| 20261101T133319Z_job12560950/output-simulated/figures/Figure_D14_recall_2015_H.png | 0.26 | 5c55f9a86326081417173d0e84aa686281072c17 |
+| 20261101T133319Z_job12560950/output-simulated/figures/exp_vs_impact_v_serious_est_3_2.png | 0.28 | d84c449623a0442c25c421e4b20b344f4a5192de |
+| 20261101T133319Z_job12560950/output-simulated/figures/exp_vs_impact_v_serious_est_2_1.png | 0.37 | ef34efd3b545501311c1a1dc33c62c3e00e9198e |
+| 20261101T133319Z_job12560950/output-simulated/figures/Recalls_2017_raw_trends.png | 0.38 | d312c7d4f2abefcfe3d2a6424edeea6cd9260bd7 |
+| 20261101T133319Z_job12560950/output/figures/Deregulation_May31_23_Paper.png | 1.26 | 1b5a0189e3966491381b59c6cf4b9bd3be1132c9 |
+| 20261101T133319Z_job12560950/output-simulated/figures/Deregulation_May31_23_Paper.png | 1.26 | 1b5a0189e3966491381b59c6cf4b9bd3be1132c9 |
+| 20261101T133319Z_job12560950/data/raw/RegNum_Factorized_Synth.csv | 16.83 | 28da2e1e54497be9d5a73f706a9d94d8b446c771 |

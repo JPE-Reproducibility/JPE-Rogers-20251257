@@ -1,0 +1,61 @@
+{
+  "_comment": "OCI-to-SIF provenance for the reference container image (recorded 2026-09-08; refreshed 2026-09-12 when the image was rebuilt to bake in the NLTK punkt_tab tokenizer). The image was built by the hardened build-sif-image CI workflow from an immutable source commit, pushed to the GitHub Container Registry by digest, and converted to an Apptainer SIF on a Linux compute node from that exact digest. The workflow's provenance artifact could not be uploaded (artifact-storage quota), so the values below were taken from the build-provenance JSON the workflow printed to its build log and re-checked here: every recipe hash against `git show <source_commit>:<path>`, and the SIF hash with sha256sum on the compute node that built it. certification/EXPECTED_SIF_SHA carries the same SIF hash.",
+  "status": "REBUILT_FROM_IMMUTABLE_COMMIT",
+  "status_note": "This image implements the R 4.1.3 + fixest 0.10.4 recipe that environment_decision below selects. The condition attached to that decision -- a full real-data run inside this exact image -- was met on 2026-09-14 (source commit 84f53b7); the hash-bound certification run of the final deposit archive on the real data is still pending.",
+  "recipe": {
+    "source_commit": "a0f2facd90f030a1e30a061c104ac2ca1127e79f",
+    "ci_run": "https://github.com/parkerrogers/fda-replication-v33-remediation/actions/runs/34699552876",
+    "dockerfile_sha256": "7c8ec93795e13643a5f0fb39412ba6b22350a889535b6e6cf42fb72f417da45c",
+    "install_r_packages_R_sha256": "37c7e71871c838eab1f20f10fa38308f4ed317cb3050a8b8268332a0c2eb30fe",
+    "requirements_lock_txt_sha256": "c6af822b8060b5713686ce8b6f0d06c1aca63844c08ff5e7985cfe17ccd18a14",
+    "renv_lock_sha256": "b1a4701b945149820f5246a0668e60d9195f3fd053d62e30da22f65b5bf8a125",
+    "renv_lock_note": "The build logged renv_lock_sha256 = MISSING because the workflow at the source commit hashed a top-level renv.lock that does not exist. The value recorded here is the SHA-256 of docker/renv.lock at the source commit. The workflow's provenance step was corrected for later builds.",
+    "build_workflow_yml_sha256": "fa6bc5363d9e2a3fb3a14eadb40d7c6d8cd78307ff6d6d8bc4e33097d3cdcc5d",
+    "build_workflow_note": "The SHA-256 of the build workflow file as it ran, at the source commit. A later commit changed only its provenance step (the renv.lock path and a non-fatal artifact upload), not the image build itself."
+  },
+  "base_image": {
+    "reference": "rocker/r-ver:4.1.3",
+    "base_digest": "rocker/r-ver@sha256:96be237557b98e5d34957ed4fcbf386999981119086cd4b4cfbafd5c2a47a3f4",
+    "note": "Resolved and pinned by digest by the workflow at build time (--build-arg BASE_REF)."
+  },
+  "oci_image": {
+    "oci_image_digest": "ghcr.io/parkerrogers/fda-np126@sha256:e779c623f83347abf0d5b4b078d61b4166b6a8a67593ba19676acfb43c5c7869",
+    "oci_tag": "a0f2facd90f0",
+    "ci_verify_output": "pdflatex: pdfTeX 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) | numpy 1.26.4 | nltk corpora OK. The docker build itself printed: NLTK corpora verified: punkt, punkt_tab, stopwords, wordnet, omw-1.4; word_tokenize works offline.",
+    "conversion_command": "apptainer build fda_np126_a0f2fac.sif docker://ghcr.io/parkerrogers/fda-np126@sha256:e779c623f83347abf0d5b4b078d61b4166b6a8a67593ba19676acfb43c5c7869 (run on a Linux compute node; a read-only registry token was supplied on stdin; the result was then installed under the name fda_np126.sif)",
+    "apptainer_version": "apptainer version 1.3.6"
+  },
+  "sif": {
+    "filename": "fda_np126.sif",
+    "sif_sha256": "b9f9ee2aea02c556475487668cf21fcccff0ef07cafd9369ce9100752b4d41a8",
+    "verification": "Verified on a Linux compute node on 2026-09-12 with `apptainer exec --cleanenv --containall --net none`: nltk 3.9.2 with punkt_tab present at /opt/nltk_data/tokenizers/punkt_tab/english and word_tokenize working with no network; numpy 1.26.4, pandas 2.3.3, rpy2 3.6.4, R 4.1.3, fixest 0.10.4, data.table 1.14.2. A full file-level comparison against the superseded image below found: identical package versions (790 dpkg packages, 190 pip packages, 203 R packages); byte-identical fixest, data.table, numpy, pandas, scipy and torch binaries; the NLTK punkt_tab tokenizer newly present under /opt/nltk_data (78 files); 23 R packages (including didimputation), rpy2 and the source-built Python recompiled during the image build and therefore differing byte-wise; and differences in Python bytecode caches, TeX and font caches, build logs, /etc/group, the image labels, and two comment lines of docker/entrypoint.sh.",
+    "superseded_sif_sha256": "39e6b0da5f5e0db21254380833bbddf4e1f79f9f612da3488e6066e6f60c6279",
+    "superseded_note": "An earlier interim image, built by CI from docker/Dockerfile on a feature branch, in which the NLTK punkt_tab tokenizer was missing. Its hash is recorded here only so that it cannot be mistaken for the reference image's; it is not the reference image and must not be used."
+  },
+  "in_image_expected_current_recipe": {
+    "numpy": "1.26.4",
+    "R": "4.1.3",
+    "fixest": "0.10.4",
+    "nltk": "3.9.2 (punkt, punkt_tab, stopwords, wordnet, omw-1.4 baked into /opt/nltk_data)",
+    "preflight": "before running anything, the certification script checks the SIF's sha256 against certification/EXPECTED_SIF_SHA and records the in-image numpy and pdflatex versions",
+    "note": "these are the versions the committed docker/Dockerfile and docker/renv.lock pin; per environment_decision below, this is the selected recipe"
+  },
+  "environment_decision": {
+    "decided": "2026-09-12 (author), made conditional on 2026-09-14 (author): KEEP R 4.1.3 + fixest 0.10.4 (with numpy 1.26.4) as the selected environment, conditional on a full real-data comparison inside this exact image reproducing the manuscript. Had it not, the R 4.0.1 + fixest 0.12.1 option would have reopened. This supersedes the 2026-09-08 decision recorded below, which was to rebuild on R 4.0.1 + fixest 0.12.1 if the then-current container did not reproduce the manuscript.",
+    "pending_evidence": "What remains is the hash-bound certification run of the final deposit archive on the real data. Already done, on 2026-09-14 (source commit 84f53b7): a full real-data run in this exact image (SIF b9f9ee2a) starting from empty outputs, which completed run_all with 25 steps run, 0 failed and 11 skipped; all 50 formatted tables byte-identical to the committed copies; the strict numeric comparator matching 120 of 130 files, with the remaining 10 event-study CSVs agreeing to within 4.44e-14 (numerical equivalence); the semantic comparator passing; and the in-text number gate passing on all 38 scalars it then covered. The other evidence listed below predates this image.",
+    "selected": {"numpy": "1.26.4", "R": "4.1.3", "fixest": "0.10.4", "base": "rocker/r-ver:4.1.3"},
+    "evidence": [
+      "2026-09-12, on the superseded image above (whose package versions are identical to this image, but whose source-built libraries, including didimputation and rpy2, were recompiled for it): 03a_estimation_3to2.py on the real data reproduced all 50 committed tables byte-for-byte under fixest 0.10.4 and under 0.12.1, under the OpenBLAS Zen, Haswell, SandyBridge, Nehalem and Prescott kernels, and under the reference BLAS.",
+      "2026-09-05, on an earlier build of the same R 4.1.3 recipe with the Python pipeline run by a separate numpy 1.26.4 environment: a forced full-estimation real-data run starting from the derived data (the generation steps did not run) regenerated all 50 output/tables/Formatted/*.tex byte-identically. Of 140 committed output/tables CSVs, 123 were byte-identical, 15 differed only in the last floating-point digits (maximum absolute difference 7.2e-14, from full-precision intermediates), and 2 differed only because the committed copies predated later code changes.",
+      "The 0.1-0.6 % (one 3.6 %) differences cited under the superseded decision came from a June 2026 Docker run under x86_64 emulation on an Apple-silicon Mac. They did not replicate on native Linux, and their cause was not identified; the tests above rule out both the BLAS kernel and the fixest version.",
+      "All of the tests above ran on AMD EPYC 7742 Linux nodes. The hash-bound real-data certification run of the final deposit archive in this image is the definitive check; the full real-data run in this image from empty outputs, recorded under pending_evidence, is the interim check."
+    ],
+    "superseded_2026_09_08": {
+      "decided": "2026-09-08 (author): LOCK the reference image on the environment in which the manuscript's R-estimated numbers were produced -- R 4.0.1 + fixest 0.12.1, with numpy 1.26.4 -- so that the container reproduces them directly, conditional on the rebuilt container actually reproducing them.",
+      "target": {"numpy": "1.26.4", "R": "4.0.1", "fixest": "0.12.1", "base": "rocker/r-ver:4.0.1"},
+      "fallback": {"numpy": "1.26.4", "R": "4.1.3", "fixest": "0.10.4", "base": "rocker/r-ver:4.1.3",
+                   "note": "the committed docker/Dockerfile, docker/renv.lock and requirements-lock.txt pin this fallback and are retained; taking the fallback route, with its 0.1-0.6 % cross-environment R/fixest differences, would have required the Data Editor's written acceptance of a semantic rather than byte-identical comparison of the real-data outputs"},
+      "historical_action_not_taken": "Rebuilding off-cluster at the target R 4.0.1 / fixest 0.12.1 (regenerating renv.lock for R 4.0.1), verifying that it reproduces the manuscript numbers, then refreshing this file's recipe hashes and digests together with certification/EXPECTED_SIF_SHA, and falling back to R 4.1.3 plus the Data Editor's acceptance of a semantic comparison only if the R 4.0.1 container did not reproduce across platforms. The recipe was not changed, because that rebuild could not be built or tested off-cluster."
+    }
+  }
+}

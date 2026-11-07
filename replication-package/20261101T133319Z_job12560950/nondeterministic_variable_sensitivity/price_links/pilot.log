@@ -1,0 +1,12 @@
+sampled 40 items (20 per direction); 5 draws each = 200 calls; model=gpt-5-mini-2025-08-07
+  25/200 calls
+  50/200 calls
+  75/200 calls
+  100/200 calls
+  125/200 calls
+  150/200 calls
+  175/200 calls
+  200/200 calls
+
+done in 584s | calls=200 errors=0
+tokens: prompt=445,690 completion=234,850

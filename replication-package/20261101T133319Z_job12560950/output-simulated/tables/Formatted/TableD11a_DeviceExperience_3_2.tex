@@ -1,0 +1,37 @@
+\begin{table}[h!]
+\centering
+\caption{\textbf{Relationship Between Impacts and Device Experience (III to II)}}
+\label{tab:impacts_vs_exp_3_2}
+\begin{tabular}{lcc}
+\hline
+\hline
+\textbf{Variable} & \textbf{(1)} & \textbf{(2)} \\
+\midrule
+Device Experience (years) & -0.0051* & -0.0203 \\
+ & (0.0019) & (0.0249) \\
+Intercept & 0.2379* & 1.2131 \\
+ & (0.1075) & (1.3833) \\
+Baseline Serious Adverse Events & -0.0005 & 0.0312 \\
+ & (0.0040) & (0.0521) \\
+FDA's Own Accord & 0.0128 & -0.2314 \\
+ & (0.0401) & (0.5365) \\
+Orthopedic Devices & 0.0736 & 0.7868 \\
+ & (0.0952) & (1.2320) \\
+Other Devices & -0.1523+ & -0.3300 \\
+ & (0.0761) & (0.9822) \\
+Plastic Surgery, Gastroenterology-Urology Devices & 0.0419 & -0.6571 \\
+ & (0.0935) & (1.2020) \\
+Baseline Patent Count & --- & -0.2333*** \\
+ & --- & (0.0325) \\
+\midrule
+N & 25 & 25 \\
+Serious-Event Estimate & Yes & No \\
+Patenting Estimate & No & Yes \\
+\bottomrule
+
+\end{tabular}
+\caption*{
+\begin{footnotesize}Note: The regression relates device-level DiD estimates for (1) serious adverse events and (2) patenting activity to each device type's market age (FDA years of experience) and other covariates, including baseline patenting rates. \textquotedblleft---\textquotedblright\ indicates variables excluded from a given specification. Due to limited data, fixed effects are included only for higher-risk device categories (each with $\geq$ 2 observations); cardiovascular devices are the omitted group. To increase power, FDA-initiated reclassifications (own accord = 0) are included with a corresponding fixed effect. +, *, **, *** denote significance at 0.10, 0.05, 0.01, 0.001 levels.
+\end{footnotesize}
+}
+\end{table}

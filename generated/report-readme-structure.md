@@ -1,0 +1,657 @@
+### README Structure Audit
+
+_Generated on 2026-11-07T16:44:17.678_
+
+#### Required Section Checklist
+
+- ✅ Data availability / sources: mentioned on line 56
+- ✅ Software requirements: mentioned on line 644
+- ✅ Reproduction instructions: mentioned on line 1016
+- ✅ Computational requirements: mentioned on line 39
+- ✅ License / terms of use: mentioned on line 76
+
+#### Data Source Citation Coverage
+
+For each data file present in the package, we check whether the README mentions
+it by name, and if so whether a URL/DOI and an access date appear nearby. This is
+a static text-proximity check, not a trace of actual provenance — treat gaps as a
+lead for manual review.
+
+
+| Data files | Mentioned in README | Has URL/DOI nearby | Has access date nearby |
+|------------|----------------------|---------------------|--------------------------|
+| 633 | 193 | 8 | 6 |
+
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for__medical device_ _Class II_ tort preempt.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for__medical device_ tort _Class II_.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 1985-1995.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 1996-2000.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 2001-2004.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 2005-2007.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort _hospital bed_ powered.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt 2006-2007.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt NOT pharma.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt _Class III_.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt _Class II_.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt 1985-1998.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt 1999-2004.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt 2005-2007.xlsx`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt NOT device 1985-2001.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt NOT device 2002-2007.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1989 AND date _ 1991.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1990 AND date _ 1992.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1991 AND date _ 1993.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1992 AND date _ 1994.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1993 AND date _ 1995.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1994 AND date _ 1996.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1995 AND date _ 1997.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1996 AND date _ 1998.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1997 AND date _ 1999.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1998 AND date _ 2000.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1999 AND date _ 2001.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _2000 AND date _ 2002.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _2001 AND date _ 2003.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _2002 AND date _ 2004.xlsx`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/RESTRICTED_DATA_MANIFEST.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/RESTRICTED_FILE_INVENTORY.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data_input_manifest.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/COMMITTED_PARAMETER_RIGHTS.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/DATA_DICTIONARY.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/DATA_MEMBER_COLUMN_CONTRACT.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/DATA_MEMBER_DISPOSITIONS.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/DEPOSITED_FILE_RIGHTS.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/EXPECTED_EXHIBIT_HASHES.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/EXPECTED_FROZEN_INPUT_HASHES.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/EXPECTED_FROZEN_INPUT_HASHES_REAL.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/EXPECTED_INTERMEDIATE_HASHES.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/EXPECTED_MODEL_ARTIFACT_HASHES.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/GENERATION_INPUTS.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/GENERATION_LINEAGE.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/NONTABULAR_DATA_AUTHORITY.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/PUBLIC_INPUT_HASHES.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/PUBLIC_SOURCE_PROVENANCE.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/RESTRICTED_CORPUS_INVENTORY.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/SANITIZER_REPORT.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/AD_data_applicant_df2_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/AD_data_applicant_df_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/Adv_Event_2020_2022.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/All_Adverse_Event_Manufacturers_Deduped.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/Applicant_Device_data.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/LBD_ApprovalTime_Both_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/RegNum_Factorized_Synth.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/adverse_event_panel_by_PC_full.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/2_1_GPT_Price_Links.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/3_2_GPT_Price_Links.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/3_2_begin_final_revisions.csv`: mentioned, but missing URL/DOI and access date
+- ✅ `/20261101T133319Z_job12560950/data/raw/501k_all.csv`: mentioned, with URL/DOI and access date nearby
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/CPI_deflator.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/Class2_Exemptions_2017_Grennan.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/FDA_HCPCS_Xwalk_Moazzam.csv`: mentioned, but missing URL/DOI and access date
+- ✅ `/20261101T133319Z_job12560950/data/raw/KPSS_2019_public.csv`: mentioned, with URL/DOI and access date nearby
+- ✅ `/20261101T133319Z_job12560950/data/raw/KPST_Breakthrough.csv`: mentioned, with URL/DOI and access date nearby
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/RegNum_Factorized_Synth.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/adverse_event_panel_by_PC_full.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/for_gpt_2_1_invention_dates.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/hand_coded_intuitive_3_2.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/innovation_year_3_2_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/innovation_year_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/innovation_year_all_other_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/spinal_entrant_audit.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/unique_devices_thr_75.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/unique_firms_in_PC_thr_75.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/unique_firms_thr_75.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/GRID/types.csv`: mentioned, but missing access date
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_1999.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2000.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2001.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2002.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2003.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2004.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2005.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2006.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2008.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2009.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2011.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2012.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2013.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2014.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2016.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2017.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/MAUDE/device_data/ASR/ASR_2018.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/pat_search_augment/revise_for_rescrape.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/pat_search_augment/revise_for_rescrape_3_2_latest.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/raw/pat_search_augment/revise_for_rescrape_already_had_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/drawn_years.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw1/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw10/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw2/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw3/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw4/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw5/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw6/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw7/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw8/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/draw_files/draw9/innovation_year_2_1_FDA_project.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/baseline/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/baseline/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/baseline/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/baseline/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/baseline/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/baseline/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw1/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw10/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw2/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw3/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw4/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw5/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw6/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw7/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw8/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/results/draw9/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/deposited/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline2/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline3/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hbaseline4/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw1/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw10/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw2/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw3/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw4/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw5/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw6/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw7/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw8/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/hresults/hdraw9/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/results/baseline/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/results/draw1/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_pipeline_runs/results/draw2/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/validation_invention_years/coding_sheet_BLIND.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/validation_invention_years/sample_KEY.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/BreakthroughPanel_distribution.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/BreakthroughPatents_estimates.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMainPanel_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMainPanel_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMainPanel_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMainPanel_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperSpillovers_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/DIDimpute_PaperSpillovers_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMainPanel_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PaperSpillovers_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/PatentCollectionCounts.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/RestrictedSamples_estimates.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/Table_1_summary_stats.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/Table_D14_summary_stats_by_class.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/contact_lens_case_study_ratios.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/cost_benefit_total_value_did.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/d1_price_coverage.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/d1_treated_counts.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/dpm_decile_ratio.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_base_rates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/firm_heterogeneity_k_est.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/firm_heterogeneity_k_pct.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/intext_numbers_report.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/lbd_tercile_estimation.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/lbd_tercile_estimation_product_count.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/manufacturer_linkage_coverage.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/new_entry_2015_event_study.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/new_entry_2015_in_text.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/price_sample_construction.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/recall_event_study_1996.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/recall_in_text_numbers.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/safety_embedding_distance_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/safety_embedding_percentile_robustness.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/safety_refined_keywords_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/safety_term_share.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_D.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_H.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_firm_expansion_patents.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_real_pats.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_real_pats_intuitive.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_real_pats_later.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_safety_prop.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_unique_firms.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_v_serious.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_v_serious_manuf.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_v_serious_normalizable.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_v_serious_restrict.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_2_1_v_serious_voluntary.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_D.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_H.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_absnew_firm_count.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_dev_count.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_firm_expansion.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_firm_expansion_patents.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_patents_pats_nodrugs.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_real_pats.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_real_pats_intuitive.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_real_pats_later.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_real_pats_petitioned.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_unique_firms.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_3_2_v_serious.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_price_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output/tables/event_study_coefficients/ES_coefs_price_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/BreakthroughPanel_distribution.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/BreakthroughPatents_estimates.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMainPanel_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMainPanel_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMainPanel_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMainPanel_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperSpillovers_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/DIDimpute_PaperSpillovers_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperAdverseEvent_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMainPanel_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_Log_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_Log_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_Intuitive_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_LaterTreat_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperMarketComposition_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_2_1_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_2_1_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_2_1_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_2_1_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_3_2_Estimates_Log_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_3_2_Estimates_NoLog_xi_latest_No0_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_3_2_Estimates_NoLog_xi_latest_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PaperSpillovers_3_2_Estimates_NoLog_xi_latest_poisson_oct22_24.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/PatentCollectionCounts.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/RestrictedSamples_estimates.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/Table_1_summary_stats.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/Table_D14_summary_stats_by_class.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/contact_lens_case_study_ratios.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/cost_benefit_total_value_did.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/d1_price_coverage.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/d1_treated_counts.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/dpm_decile_ratio.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_base_rates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/exp_impact_zero_crossings.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/firm_heterogeneity_k_est.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/firm_heterogeneity_k_pct.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/intext_numbers_report.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/lbd_tercile_estimation.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/lbd_tercile_estimation_product_count.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/manufacturer_linkage_coverage.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/maturity_gradient_slopes.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/model_patent_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/model_patent_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/model_v_serious_est_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/model_v_serious_est_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/new_entry_2015_event_study.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/new_entry_2015_in_text.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/price_sample_construction.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/price_utilization_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/recall_event_study_1996.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/recall_in_text_numbers.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/safety_embedding_distance_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/safety_embedding_percentile_robustness.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/safety_refined_keywords_estimates.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/safety_term_share.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_D.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_H.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_firm_expansion_patents.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_real_pats.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_real_pats_intuitive.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_real_pats_later.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_safety_prop.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_unique_firms.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_v_serious.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_v_serious_manuf.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_v_serious_normalizable.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_v_serious_restrict.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_2_1_v_serious_voluntary.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_D.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_H.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_absnew_firm_count.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_dev_count.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_firm_expansion.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_firm_expansion_patents.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_patents_pats_nodrugs.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_real_pats.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_real_pats_intuitive.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_real_pats_later.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_real_pats_petitioned.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_unique_firms.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_3_2_v_serious.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_price_2_1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/output-simulated/tables/event_study_coefficients/ES_coefs_price_3_2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data_audit_report.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/Adverse_fsize_ready_all4_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/Full_sample.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/all_patents_w_xi_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/compustat_firm_data.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/frequency_df_2to1_variety.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/frequency_df_3to2_variety.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/intuitive_2_1_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/intuitive_3_2_oct22_24_similarity.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/intuitive_spillovers_3_2_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/later_treated_2_1_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/later_treated_3_2_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/matched_pairs_intuitive_2_1.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/safety_did_analysis.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/safety_did_analysis_3_2.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/spillovers_2_1_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ✅ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_kpss/KPSS_2019_public.csv`: mentioned, with URL/DOI and access date nearby
+- ✅ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_kpst/KPST_Breakthrough.csv`: mentioned, with URL/DOI and access date nearby
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_marketscan/constrained_adv_event_new_sept25.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_marketscan/constrained_adv_event_new_sept25_3_2.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_marketscan/outpatient_combined_censored.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_maude_linkage/All_Adverse_Event_Manufacturers.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_maude_linkage/all_permnos_fname_adverse_events_oct22_24.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_maude_linkage/manual_permno_corrections.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_all_gpt4.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_both.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_wave1.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_wave1_gpt4.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_wave2.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_wave2_gpt4.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_wave3_gpt4.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_wave4_gpt4.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Liability_Encodings_wave5_gpt4.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for__medical device_ _Class II_ tort preempt.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for__medical device_ tort _Class II_.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 1985-1995.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 1996-2000.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 2001-2004.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort 2005-2007.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort _hospital bed_ powered.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt 2006-2007.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt NOT pharma.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt _Class III_.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt _Class II_.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_medical device tort preempt.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt 1985-1998.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt 1999-2004.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt 2005-2007.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt NOT device 1985-2001.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/Results list for_pharmaceutical tort preempt NOT device 2002-2007.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1989 AND date _ 1991.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1990 AND date _ 1992.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1991 AND date _ 1993.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1992 AND date _ 1994.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1993 AND date _ 1995.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1994 AND date _ 1996.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1995 AND date _ 1997.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1996 AND date _ 1998.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1997 AND date _ 1999.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1998 AND date _ 2000.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _1999 AND date _ 2001.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _2000 AND date _ 2002.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _2001 AND date _ 2003.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_nexis/medtech/Results list for__medical device_ AND _Chapter 11_ AND bankruptcy AND date _2002 AND date _ 2004.csv`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/Applicant_Cites_Only.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/FDA_patents_text.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/FDA_pats_original_firmname.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/PC_by_year_cites_ApplicantOnly.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/PC_by_year_diff_ind_appl_only.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/all_PC_pats.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/all_pats_wtitlesCPC.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/expanded_2_1_pats.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/expanded_3_2_pats.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/missed_2_1_pats.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/safety_tagged_patents.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/safety_vars_allpats.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/safety_vars_allpats_updated_v2.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/safety_vars_allpats_v2.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_patents/new_patent_analysis/all_device_patents_w_pc.csv`: mentioned, but missing access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_price_links/2_1_GPT_Price_Links.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_price_links/3_2_GPT_Price_Links.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_price_links/FDA_HCPCS_Xwalk_Moazzam.csv`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/_synthetic_source_internal/pc_effects.parquet`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/_synthetic_source_internal/public_master_skeleton.parquet`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/data_2_1_full.parquet`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/data_2_1_intuitive.parquet`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/data_2_1_latertreat.parquet`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/simulated_data/synthetic_dimensions_wrds/data_2_1_spillovers.parquet`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/SIF_PROVENANCE.json`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/regen_determinism/PAYLOAD_MIGRATION_RECORD.json`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/certification/rights_evidence/simulation_parameters.rights.json`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/certification/rights_evidence/simulation_schema_contract.rights.json`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/dedupe_settings/dedupe_dataframe_training.json`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/dedupe_settings/adverse_events/dedupe_dataframe_training.json`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/data/derived/dedupe_settings_applicant/dedupe_dataframe_training.json`: not mentioned in README
+- ✅ `/20261101T133319Z_job12560950/data/raw/device-recall-0001-of-0001-2.json`: mentioned, with URL/DOI and access date nearby
+- ⚠️ `/20261101T133319Z_job12560950/models/all-MiniLM-L6-v2/config.json`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/models/all-MiniLM-L6-v2/config_sentence_transformers.json`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/models/all-MiniLM-L6-v2/modules.json`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/models/all-MiniLM-L6-v2/sentence_bert_config.json`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/models/all-MiniLM-L6-v2/1_Pooling/config.json`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/_synthetic_source_internal/simulation_parameters.json`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/synthetic_pipeline/_synthetic_source_internal/simulation_schema_contract.json`: mentioned, but missing URL/DOI and access date
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years/raw_responses.jsonl`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/iy_2_1b_raw_responses.jsonl`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_2_1/iy_2_1/raw_responses.jsonl`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_band/raw_responses.jsonl`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/invention_years_outofband/raw_responses.jsonl`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_links/raw_responses.jsonl`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_links_full/raw_responses.jsonl`: not mentioned in README
+- ⚠️ `/20261101T133319Z_job12560950/nondeterministic_variable_sensitivity/price_links_full/pl_full2/raw_responses.jsonl`: not mentioned in README

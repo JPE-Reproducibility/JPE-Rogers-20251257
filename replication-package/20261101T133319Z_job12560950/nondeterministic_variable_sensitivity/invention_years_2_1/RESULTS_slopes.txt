@@ -1,0 +1,48 @@
+runs with a slopes table: baseline, draw1, draw2, draw3, draw4, draw5
+
+=== AGE SLOPE  (III->II rows use HAND-CODED years: invariant control) ===
+
+  2_1 patent_est  <-- model-generated
+  run                slope        s.e.         p     n
+  baseline        0.000153    0.000979    0.8762   293
+  draw1           0.000166    0.000905    0.8542   293
+  draw2           0.000108    0.000892    0.9037   293
+  draw3           0.000254    0.000876    0.7720   293
+  draw4           0.000264    0.000898    0.7689   293
+  draw5           0.000251    0.000897    0.7801   293
+
+  2_1 v_serious_est  <-- model-generated
+  run                slope        s.e.         p     n
+  baseline       -0.001498    0.001214    0.2182   293
+  draw1          -0.001224    0.001127    0.2782   293
+  draw2          -0.001463    0.001109    0.1882   293
+  draw3          -0.001303    0.001091    0.2333   293
+  draw4          -0.001363    0.001117    0.2235   293
+  draw5          -0.001048    0.001114    0.3473   293
+
+  3_2 patent_est  <-- control
+  run                slope        s.e.         p     n
+  baseline       -0.039626    0.013161    0.0079    25
+  draw1          -0.039626    0.013161    0.0079    25
+  draw2          -0.039626    0.013161    0.0079    25
+  draw3          -0.039626    0.013161    0.0079    25
+  draw4          -0.039626    0.013161    0.0079    25
+  draw5          -0.039626    0.013161    0.0079    25
+
+  3_2 v_serious_est  <-- control
+  run                slope        s.e.         p     n
+  baseline       -0.017012    0.008465    0.0597    25
+  draw1          -0.017012    0.008465    0.0597    25
+  draw2          -0.017012    0.008465    0.0597    25
+  draw3          -0.017012    0.008465    0.0597    25
+  draw4          -0.017012    0.008465    0.0597    25
+  draw5          -0.017012    0.008465    0.0597    25
+
+=== ZERO CROSSING (years) ===
+  run                   2_1/patent         2_1/v_serious            3_2/patent         3_2/v_serious
+  baseline                   168.8                  61.1                  42.5                  28.5
+  draw1                      188.5                  62.7                  42.5                  28.5
+  draw2                      188.7                  62.8                  42.5                  28.5
+  draw3                      190.9                  64.2                  42.5                  28.5
+  draw4                      185.9                  61.2                  42.5                  28.5
+  draw5                      170.5                  61.8                  42.5                  28.5

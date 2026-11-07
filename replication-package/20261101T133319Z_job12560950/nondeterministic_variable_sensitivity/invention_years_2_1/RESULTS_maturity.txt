@@ -1,0 +1,19 @@
+population (post-2015 cross-section): 2235
+deposited count over 60 years     : 651  (29.1%)   [manuscript ~650 / 29%]
+  of which drawn on 2026-10-27        : 786 (35.2%)
+  within +/-6 yrs of threshold, drawn : 497/497
+
+draw       count    share   vs deposited
+draw1        651   29.1%             +0
+draw2        655   29.3%             +4
+draw3        656   29.4%             +5
+draw4        647   28.9%             -4
+draw5        653   29.2%             +2
+
+mean 652.4  SD 3.20  range 647-656  (deposited 651)
+spread as a share of the deposited count: 1.38%
+
+Residual: 1449 codes in the population were not drawn; all sit more than 6
+years from the threshold. At the 2.5% out-of-band crossing rate measured on the control
+sample, they contribute on the order of 36 further crossings, in both
+directions, which the figures above do not include.

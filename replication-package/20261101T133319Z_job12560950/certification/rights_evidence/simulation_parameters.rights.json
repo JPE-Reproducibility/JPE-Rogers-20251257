@@ -1,0 +1,14 @@
+{
+  "_comment": "Redistribution-rights evidence for a restricted-derived committed parameter, bound to the ARTIFACT's own content hash (external-audit R2 F1/F2/F9). This settles legal/redistribution rights at source-freeze, decoupled from the package-bound PRIVACY audit and from the Data Editor's TECHNICAL acceptance. The rights gate (gen_deposited_file_rights.py) fails closed while 'determination' != APPROVED_FOR_REDISTRIBUTION. AUTHOR ACTION: review the artifact contents, then set 'determination' to APPROVED_FOR_REDISTRIBUTION, fill 'date', and flip the matching COMMITTED_PARAMETER_RIGHTS.csv row status to APPROVED_TO_SHIP.",
+  "schema": "artifact_rights/v1",
+  "artifact": "synthetic_pipeline/_synthetic_source_internal/simulation_parameters.json",
+  "artifact_sha256": "0b0504c7bae43df9d68f205900ccd2e27ed23fc12d323a545c822b4a0447405e",
+  "source_content_seal": "0b0504c7bae43df9d68f205900ccd2e27ed23fc12d323a545c822b4a0447405e",
+  "determination": "APPROVED_FOR_REDISTRIBUTION",
+  "reviewer": "Parker Rogers",
+  "reviewer_role": "author / sole redistribution-rights holder for author-generated synthetic DGP parameters",
+  "date": "2026-09-29",
+  "basis_type": "author_representation",
+  "rights_basis": "AUTHOR REPRESENTATION (not an independently verified legal opinion; external-audit R3 F8): the author represents that these author-generated synthetic data-generating-process parameters are redistributable. Contents: rounded entity cardinalities (2-3 significant figures), smoothed distribution families (negative-binomial/geometric with rounded moments), public FDA product codes and their public reclassification design, and column schemas (names/dtypes/generator-kind/missing-rate). Contains NO verbatim restricted values, NO exact counts, and NO real identifiers from MarketScan/Dimensions/WRDS-Compustat/Nexis; a 1,106-entry disclosure ledger asserts every cardinality is rounded and every size distribution smoothed. The author represents that these aggregate abstractions carry no provider-proprietary content and are the author's to redistribute. An independent IU research-data/licensing (or provider) review MAY be obtained to upgrade basis_type to 'independent_review'. NOTE: the two-significant-figure rounded DIMENSIONS additionally require the Data Editor's separate TECHNICAL acceptance (recorded elsewhere); that acceptance is not a rights determination.",
+  "_re_review_note": "2026-09-29: the artifact was re-committed under the T6 bounded-influence rule (five size families coarsened; product codes, entity universes and skeleton unchanged). The author re-reviews and re-dates this determination; the previous seal was a3eed4a43c8ea4773be248a46023d0a2245c35843df6987e2f9ffed84f7bf3d9 dated 2026-09-08. Re-reviewed and signed by the author on 2026-09-29 (sign-off request SIGNOFF_REQUEST_T6_PARAMETERS_20260929.md)."
+}

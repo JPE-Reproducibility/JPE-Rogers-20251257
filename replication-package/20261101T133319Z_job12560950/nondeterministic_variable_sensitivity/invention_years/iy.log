@@ -1,0 +1,15 @@
+system prompt rebuilt: 1151 chars
+items: 25 (archived queries, verbatim) x 5 draws = 125 calls | model=gpt-4o-2024-08-06 temperature=0
+  25/125
+  50/125
+  75/125
+  100/125
+  125/125
+
+done in 31s | calls=125 errors=0
+tokens: prompt=40,950 completion=6,717
+
+=== INVENTION YEARS: 25 items x 5 draws, gpt-4o-2024-08-06, temperature=0 ===
+  items where the returned YEAR changes across draws: 5/25 (20%)
+  among those, mean year spread: 2.0 (max 6)
+  all 5 draws reproduce the ARCHIVED 2024 year: 17/25 (68%)

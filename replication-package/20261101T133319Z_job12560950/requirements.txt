@@ -1,0 +1,98 @@
+# Direct Python dependencies of the shipped code, pinned to the versions used to
+# produce the verified package outputs (Python 3.9.13, macOS x86_64 under Rosetta;
+# the same versions are baked into the reference container image).
+#
+# Every third-party module imported by a shipped .py file is pinned below, at the
+# version recorded in requirements-lock.txt. The two exceptions are marked
+# "provenance only" at the bottom of this file: they are imported only by scripts
+# that document how third-party data were acquired and that the replication does
+# not run.
+#
+# HOW TO INSTALL (this file is the supported install path):
+#     /usr/local/bin/python3.9 -m venv ~/fda-env
+#     ~/fda-env/bin/python -m pip install --upgrade pip
+#     ~/fda-env/bin/python -m pip install -r requirements.txt
+#     ~/fda-env/bin/python -m nltk.downloader punkt punkt_tab stopwords wordnet omw-1.4
+#
+# NOTE ON requirements-lock.txt. That file is the exact transitive freeze of the
+# machine that produced the outputs and is kept byte-identical to the copy the
+# container image was built from. It CANNOT be installed with a plain
+# `pip install -r requirements-lock.txt`: it pins PySimpleGUI==4.47.0, which has
+# been withdrawn from PyPI, it pins the Linux/CUDA build of torch, and pip's
+# resolver rejects the (self-consistent) set. The container installs it as
+#     grep -viE '^(PySimpleGUI|pyreadstat)[=<>]' requirements-lock.txt > reqs.txt
+#     python3 -m pip install --no-deps -r reqs.txt
+#     python3 -m pip install --no-deps torch==2.2.2 \
+#         --index-url https://download.pytorch.org/whl/cpu
+# Use the lock file only to look up an exact transitive version; install from
+# this file.
+#
+# The `>=` floors are intentionally omitted here in favor of exact pins so a
+# clean-room reviewer reproduces the same numerical results.
+#
+# R is a separate requirement (rpy2 below is only the bridge). See the README's
+# "R packages" section.
+
+# --- core numerical / data stack (every route) -------------------------------
+pandas==2.3.3
+# numpy MUST be 1.26.x: numpy 2.0 changes numerical behavior in the Mahalanobis
+# matching (02_match_samples) and safety aggregation (06a), which shifts the
+# manuscript safety results (e.g., safety_did patents_sum 48,703 -> 52,767).
+# 1.26.4 reproduces the manuscript byte-for-byte; do NOT bump to 2.x.
+numpy==1.26.4
+numba==0.60.0
+scipy==1.13.1
+matplotlib==3.9.4
+seaborn==0.13.2
+scikit-learn==1.6.1
+statsmodels==0.14.6
+rpy2==3.6.4
+pyhdfe==0.2.0
+linearmodels==6.1
+# pandas has no built-in Parquet engine; six shipped members are .parquet and
+# steps 5 and 12 and the simulation generators read/write them.
+pyarrow==21.0.0
+# Pillow: image content check in the audit step (step 36) and the semantic
+# figure comparison in certification/compare_exhibit_fidelity.py.
+pillow==11.3.0
+
+# --- safety robustness validation (steps 16, 17) -----------------------------
+gensim==4.4.0
+flashtext==2.7
+nltk==3.9.2
+sentence-transformers==5.1.2
+# torch is pulled in by sentence-transformers. The pin below is the version used.
+# On Linux, PyPI serves the CUDA build; install the CPU build instead with
+#   pip install torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2
+# NLTK corpora are a separate download and are NOT installed by pip:
+#   python -m nltk.downloader punkt punkt_tab stopwords wordnet omw-1.4
+
+# --- appendix product-variety analysis (step 22) -----------------------------
+swifter==1.4.0
+
+# --- raw-data construction (step 1; both the synthetic and the real route) ----
+rapidfuzz==3.13.0
+joblib==1.5.3
+
+# --- raw-data construction, REAL restricted data only (steps 3, 4, 8) ---------
+# pandas_dedupe performs the entity resolution behind the learning-by-doing and
+# adverse-event PERMNO linkages. It is imported only when FDA_SYNTHETIC_MODE is
+# unset, so the simulated-data route does not need it; an authorized user
+# re-running the real from-raw route does.
+pandas-dedupe==1.5.0
+
+# --- provenance only: not needed to reproduce any exhibit --------------------
+# These two are imported by scripts that document how third-party data were
+# acquired. Neither script runs in any documented reproduction route, and both
+# call external paid APIs, so they are left uninstalled by default.
+#   code/12_invention_year_generation.py, code/12b_gpt_price_links_generation.py
+#     -> openai==2.28.0   (guarded by try/except ImportError)
+#   code/00_generate_data/gen_00_dimensions_patent_extraction.py
+#     -> dimcli           (Dimensions DSL client; imported inside a function)
+# openai==2.28.0 is the version recorded in requirements-lock.txt. No dimcli
+# version was recorded in the reference environment, and the script's queries
+# ran against Dimensions DSL v1.24 (week of 2020-05-11), which the vendor no
+# longer serves, so the extraction is not re-runnable in any case. If you want
+# to read either script executed rather than only read, install them ad hoc:
+#   pip install openai==2.28.0 dimcli

@@ -1,0 +1,50 @@
+\begin{table}[h!]
+\begin{center}
+\caption{\textbf{Effect of Reclassification on Log Procedure Utilization}}
+\resizebox{.9\textwidth}{!}{
+   \small
+\begin{tabular}{lccc}
+\hline \hline
+&   & \multicolumn{2}{c}{DiD Estimates}\\
+\cmidrule{3-4}
+ & Pre-mean & All CPTs & Matched \\
+ & \multicolumn{1}{c}{(1)}  & \multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+ \addlinespace
+
+\midrule
+\addlinespace
+\textbf{A. Class III to II} & & & \\
+\addlinespace
+\hspace{6mm}Conley--Taber & 9.78† &0.20&  0.36 \\
+ &(1.39) & (0.68) & (0.40) \\
+\addlinespace
+\hspace{6mm}BJS Imputation & 9.78† &0.19&  0.33*** \\
+ &(1.39) & (0.19) & (0.09) \\
+\addlinespace
+\cmidrule{2-4}
+\hspace{6mm}Sample Size &  & 594 & 126 \\
+
+\addlinespace
+\hline
+\addlinespace
+
+\textbf{B. Class II to I} & & & \\
+\addlinespace
+\hspace{6mm}Conley--Taber & 10.40† &0.85***&  $-$0.24 \\
+ &(1.71) & (0.14) & (0.23) \\
+\addlinespace
+\hspace{6mm}BJS Imputation & 10.40† &0.85*&  $-$0.24 \\
+ &(1.71) & (0.36) & (0.38) \\
+\addlinespace
+\cmidrule{2-4}
+\hspace{6mm}Sample Size &  & 1062 & 1260 \\
+\addlinespace
+
+\bottomrule
+\end{tabular}}
+
+\caption*{ \begin{footnotesize}Note: The table reports estimates from Equation \ref{eq:OLS}, a DiD OLS model. The outcome is log annual procedure counts (utilization) from MarketScan claims data (1996--2013). Column (1) reports 5-year pre-event means for treated device types. Columns (2)--(3) show DiD estimates using controls that match on (2) baseline procedure counts across all procedure codes and (3) device outcomes. For each panel, the first row reports Conley--Taber stacked DiD estimates and the second row reports BJS imputation estimates. † Pre-mean is unlogged, while estimates are in logs. Confidence intervals use Conley--Taber inference. +, *, **, and *** denote statistical significance at 0.10, 0.05, 0.01, and 0.001 levels, respectively.
+\end{footnotesize} }
+\label{tab:Utilization}
+\end{center}
+\end{table}
